@@ -1,7 +1,7 @@
 
 # Assorted.Utils
 
-Most of the time, when I am writing a small program as proof of concept or to test something, I end up writing the same set of helper functions. Finally, I decided to put them all together in a NuGet package to make my life a bit easier. I hope you find it useful.
+Most of the time, when I am writing a small program as proof of concept or to test something, I end up writing the same set of helper functions. Finally, I decided to put them all together in a [NuGet package](https://www.nuget.org/packages/Assorted.Utils/) to make my life a bit easier. I hope you find it useful.
 
 ## Content
 
@@ -25,10 +25,7 @@ The library contains the following namespaces:
   - implementation of [Knuth–Morris–Pratt](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) string-search algorithm.
   - a string stream class
 
-You will find the detailed documentation of the library by following one of these links:
-
-- [Documentation in Markdown format]()
-- [Documentation in HTML format]()
+You will find the detailed documentation of the library [here](https://github.com/Khojasteh/assorted-utils/blob/master/docs/markdown/_toc.Assorted.Utils.md).
 
 ## Contribution
 
