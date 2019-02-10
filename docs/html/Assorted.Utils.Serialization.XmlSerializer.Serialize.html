@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<title>XmlSerializer.Serialize&lt;T&gt;(T) Method</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="style.css"/></head>
+<body>
+
+<h1 id="XmlSerializer.Serialize Method">XmlSerializer.Serialize Method</h1>
+
+<blockquote>
+Namespace: <a href="_toc.Assorted.Utils.html#Assorted.Utils.Serialization%20Namespace">Assorted.Utils.Serialization</a><br/>
+Assembly: <a href="_toc.Assorted.Utils.html">Assorted.Utils</a> (Assorted.Utils.dll) version 1.0.0.0
+</blockquote>
+
+<table>
+<thead>
+<tr><th>Overload</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="Assorted.Utils.Serialization.XmlSerializer.Serialize.html#Serialize%3CT%3E%28T%29">Serialize&lt;T&gt;(T)</a></td><td>Converts an object to its XML representation.</td></tr>
+<tr><td><a href="Assorted.Utils.Serialization.XmlSerializer.Serialize.html#Serialize%3CT%3E%28T%2C%20Stream%29">Serialize&lt;T&gt;(T, Stream)</a></td><td>Serializes a given object and writes the XML document into the specified <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.stream"><code>System.IO.Stream</code></a>.</td></tr>
+<tr><td><a href="Assorted.Utils.Serialization.XmlSerializer.Serialize.html#Serialize%3CT%3E%28TextWriter%2C%20T%29">Serialize&lt;T&gt;(TextWriter, T)</a></td><td>Serializes a given object and writes the XML document into the specified <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.textwriter"><code>System.IO.TextWriter</code></a>.</td></tr>
+</tbody>
+</table>
+
+<h2 id="Serialize&lt;T&gt;(T)">Serialize&lt;T&gt;(T)</h2>
+
+<div class="block">Converts an object to its XML representation.</div>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="prettyprint lang-csharp">public sealed virtual string Serialize&lt;T&gt;(T graph)</pre>
+
+<h4 id="Type Parameters">Type Parameters</h4>
+
+<dl>
+<dt><code>T</code></dt><dd>
+<div class="block">The type of object to be serialized.</div>
+</dd></dl>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+<dt><code>graph</code>: <em>T</em></dt><dd>
+<div class="block">An object to be represented in XML format.</div>
+</dd></dl>
+
+<h4 id="Return Value">Return Value</h4>
+
+<dl>
+<dt><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a></dt><dd>
+<div class="block">The XML representation of the specified object.</div>
+</dd></dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table>
+<thead>
+<tr><th>Exception</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">System.ArgumentNullException</a></td><td><code>graph</code> is <code>null</code>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="See Also">See Also</h3>
+
+<ul>
+<li><a href="_toc.Assorted.Utils.html#Assorted.Utils.Serialization%20Namespace">Assorted.Utils.Serialization Namespace</a></li>
+<li><a href="Assorted.Utils.Serialization.XmlSerializer.html">XmlSerializer Class</a></li>
+</ul>
+
+<h2 id="Serialize&lt;T&gt;(T, Stream)">Serialize&lt;T&gt;(T, Stream)</h2>
+
+<div class="block">Serializes a given object and writes the XML document into the specified <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.stream"><code>System.IO.Stream</code></a>.</div>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="prettyprint lang-csharp">public sealed virtual void Serialize&lt;T&gt;(T graph, Stream stream)</pre>
+
+<h4 id="Type Parameters">Type Parameters</h4>
+
+<dl>
+<dt><code>T</code></dt><dd>
+<div class="block">The type of object to be serialized.</div>
+</dd></dl>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+<dt><code>graph</code>: <em>T</em></dt><dd>
+<div class="block">An <a href="https://docs.microsoft.com/en-us/dotnet/api/system.object"><code>System.Object</code></a> to be represented in XML format.</div>
+</dd><dt><code>stream</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.stream">Stream</a></dt><dd>
+<div class="block">A <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.stream"><code>System.IO.Stream</code></a> object to write the XML representation of the <code>graph</code> into.</div>
+</dd></dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table>
+<thead>
+<tr><th>Exception</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">System.ArgumentNullException</a></td><td><code>stream</code> or <code>graph</code> is <code>null</code>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="See Also">See Also</h3>
+
+<ul>
+<li><a href="_toc.Assorted.Utils.html#Assorted.Utils.Serialization%20Namespace">Assorted.Utils.Serialization Namespace</a></li>
+<li><a href="Assorted.Utils.Serialization.XmlSerializer.html">XmlSerializer Class</a></li>
+</ul>
+
+<h2 id="Serialize&lt;T&gt;(TextWriter, T)">Serialize&lt;T&gt;(TextWriter, T)</h2>
+
+<div class="block">Serializes a given object and writes the XML document into the specified <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.textwriter"><code>System.IO.TextWriter</code></a>.</div>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="prettyprint lang-csharp">public virtual void Serialize&lt;T&gt;(TextWriter writer, T graph)</pre>
+
+<h4 id="Type Parameters">Type Parameters</h4>
+
+<dl>
+<dt><code>T</code></dt><dd>
+<div class="block">The type of object to be serialized.</div>
+</dd></dl>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+<dt><code>writer</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.textwriter">TextWriter</a></dt><dd>
+<div class="block">A <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.textwriter"><code>System.IO.TextWriter</code></a> object to write the XML representation of the <code>graph</code> into.</div>
+</dd><dt><code>graph</code>: <em>T</em></dt><dd>
+<div class="block">An <a href="https://docs.microsoft.com/en-us/dotnet/api/system.object"><code>System.Object</code></a> to be represented in XML format.</div>
+</dd></dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table>
+<thead>
+<tr><th>Exception</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">System.ArgumentNullException</a></td><td><code>writer</code> or <code>graph</code> is <code>null</code>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="See Also">See Also</h3>
+
+<ul>
+<li><a href="_toc.Assorted.Utils.html#Assorted.Utils.Serialization%20Namespace">Assorted.Utils.Serialization Namespace</a></li>
+<li><a href="Assorted.Utils.Serialization.XmlSerializer.html">XmlSerializer Class</a></li>
+</ul>
+
+<hr/>
+<footer>
+<em>This document is generated by <a href="https://github.com/Khojasteh/dg">DG</a>.</em>
+</footer>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" type="text/javascript"></script>
+</body>
+</html>

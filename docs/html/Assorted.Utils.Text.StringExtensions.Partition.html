@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<title>StringExtensions.Partition(this string, char) Method</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="style.css"/></head>
+<body>
+
+<h1 id="StringExtensions.Partition Method">StringExtensions.Partition Method</h1>
+
+<blockquote>
+Namespace: <a href="_toc.Assorted.Utils.html#Assorted.Utils.Text%20Namespace">Assorted.Utils.Text</a><br/>
+Assembly: <a href="_toc.Assorted.Utils.html">Assorted.Utils</a> (Assorted.Utils.dll) version 1.0.0.0
+</blockquote>
+
+<table>
+<thead>
+<tr><th>Overload</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="Assorted.Utils.Text.StringExtensions.Partition.html#Partition%28this%20string%2C%20char%29">Partition(this string, char)</a></td><td>Splits the string at the first occurrence of a specified Unicode character and returns the substrings before and after the separator.</td></tr>
+<tr><td><a href="Assorted.Utils.Text.StringExtensions.Partition.html#Partition%28this%20string%2C%20string%29">Partition(this string, string)</a></td><td>Splits the string at the first occurrence of a specified string and returns the substrings before and after the separator.</td></tr>
+</tbody>
+</table>
+
+<h2 id="Partition(this string, char)">Partition(this string, char)</h2>
+
+<div class="block">Splits the string at the first occurrence of a specified Unicode character and returns the substrings before and after the separator.</div>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="prettyprint lang-csharp">public static ValueTuple&lt;string, string&gt; Partition(this string source, char separator)</pre>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+<dt><code>source</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a></dt><dd>
+<div class="block">The source string.</div>
+</dd><dt><code>separator</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.char">char</a></dt><dd>
+<div class="block">The separator Unicode character.</div>
+</dd></dl>
+
+<h4 id="Return Value">Return Value</h4>
+
+<dl>
+<dt><a href="https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2,">ValueTuple&lt;string, string&gt;</a></dt><dd>
+<div class="block">A <a href="https://docs.microsoft.com/en-us/dotnet/api/system.tuple-2"><code>System.Tuple&lt;T1, T2&gt;</code></a> containing the substring before and after the specified <code>separator</code> if the separator is found; otherwise, the first item in the tuple is the <code>source</code> string itself and the second item is <code>null</code>.</div>
+</dd></dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table>
+<thead>
+<tr><th>Exception</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">System.ArgumentNullException</a></td><td><code>source</code> is <code>null</code>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="See Also">See Also</h3>
+
+<ul>
+<li><a href="_toc.Assorted.Utils.html#Assorted.Utils.Text%20Namespace">Assorted.Utils.Text Namespace</a></li>
+<li><a href="Assorted.Utils.Text.StringExtensions.html">StringExtensions Class</a></li>
+</ul>
+
+<h2 id="Partition(this string, string)">Partition(this string, string)</h2>
+
+<div class="block">Splits the string at the first occurrence of a specified string and returns the substrings before and after the separator.</div>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="prettyprint lang-csharp">public static ValueTuple&lt;string, string&gt; Partition(this string source, string separator)</pre>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+<dt><code>source</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a></dt><dd>
+<div class="block">The source string.</div>
+</dd><dt><code>separator</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a></dt><dd>
+<div class="block">The separator string.</div>
+</dd></dl>
+
+<h4 id="Return Value">Return Value</h4>
+
+<dl>
+<dt><a href="https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2,">ValueTuple&lt;string, string&gt;</a></dt><dd>
+<div class="block">A <a href="https://docs.microsoft.com/en-us/dotnet/api/system.tuple-2"><code>System.Tuple&lt;T1, T2&gt;</code></a> containing the substring before and after the specified <code>separator</code> if the separator is found; otherwise, the first item in the tuple is the <code>source</code> string itself and the second item is <code>null</code>.</div>
+</dd></dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table>
+<thead>
+<tr><th>Exception</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">System.ArgumentNullException</a></td><td><code>source</code> or <code>separator</code> is <code>null</code>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="See Also">See Also</h3>
+
+<ul>
+<li><a href="_toc.Assorted.Utils.html#Assorted.Utils.Text%20Namespace">Assorted.Utils.Text Namespace</a></li>
+<li><a href="Assorted.Utils.Text.StringExtensions.html">StringExtensions Class</a></li>
+</ul>
+
+<hr/>
+<footer>
+<em>This document is generated by <a href="https://github.com/Khojasteh/dg">DG</a>.</em>
+</footer>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" type="text/javascript"></script>
+</body>
+</html>

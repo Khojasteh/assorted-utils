@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<title>XmlSerializer.Deserialize&lt;T&gt;(Stream) Method</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="style.css"/></head>
+<body>
+
+<h1 id="XmlSerializer.Deserialize Method">XmlSerializer.Deserialize Method</h1>
+
+<blockquote>
+Namespace: <a href="_toc.Assorted.Utils.html#Assorted.Utils.Serialization%20Namespace">Assorted.Utils.Serialization</a><br/>
+Assembly: <a href="_toc.Assorted.Utils.html">Assorted.Utils</a> (Assorted.Utils.dll) version 1.0.0.0
+</blockquote>
+
+<table>
+<thead>
+<tr><th>Overload</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="Assorted.Utils.Serialization.XmlSerializer.Deserialize.html#Deserialize%3CT%3E%28Stream%29">Deserialize&lt;T&gt;(Stream)</a></td><td>Deserializes the XML document contained by the specified <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.stream"><code>System.IO.Stream</code></a>.</td></tr>
+<tr><td><a href="Assorted.Utils.Serialization.XmlSerializer.Deserialize.html#Deserialize%3CT%3E%28string%29">Deserialize&lt;T&gt;(string)</a></td><td>Converts the XML representation of an object to an instance of that object.</td></tr>
+<tr><td><a href="Assorted.Utils.Serialization.XmlSerializer.Deserialize.html#Deserialize%3CT%3E%28TextReader%29">Deserialize&lt;T&gt;(TextReader)</a></td><td>Deserializes the XML document contained by the specified <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.textreader"><code>System.IO.TextReader</code></a>.</td></tr>
+</tbody>
+</table>
+
+<h2 id="Deserialize&lt;T&gt;(Stream)">Deserialize&lt;T&gt;(Stream)</h2>
+
+<div class="block">Deserializes the XML document contained by the specified <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.stream"><code>System.IO.Stream</code></a>.</div>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="prettyprint lang-csharp">public sealed virtual T Deserialize&lt;T&gt;(Stream stream)</pre>
+
+<h4 id="Type Parameters">Type Parameters</h4>
+
+<dl>
+<dt><code>T</code></dt><dd>
+<div class="block">The type of object to be deserialized.</div>
+</dd></dl>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+<dt><code>stream</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.stream">Stream</a></dt><dd>
+<div class="block">A <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.stream"><code>System.IO.Stream</code></a> object to read the XML representation of the object from.</div>
+</dd></dl>
+
+<h4 id="Return Value">Return Value</h4>
+
+<dl>
+<dt><a href="https://docs.microsoft.com/en-us/dotnet/api/t">T</a></dt><dd>
+<div class="block">The deserialized object.</div>
+</dd></dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table>
+<thead>
+<tr><th>Exception</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">System.ArgumentNullException</a></td><td><code>stream</code> is <code>null</code>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="See Also">See Also</h3>
+
+<ul>
+<li><a href="_toc.Assorted.Utils.html#Assorted.Utils.Serialization%20Namespace">Assorted.Utils.Serialization Namespace</a></li>
+<li><a href="Assorted.Utils.Serialization.XmlSerializer.html">XmlSerializer Class</a></li>
+</ul>
+
+<h2 id="Deserialize&lt;T&gt;(string)">Deserialize&lt;T&gt;(string)</h2>
+
+<div class="block">Converts the XML representation of an object to an instance of that object.</div>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="prettyprint lang-csharp">public sealed virtual T Deserialize&lt;T&gt;(string xml)</pre>
+
+<h4 id="Type Parameters">Type Parameters</h4>
+
+<dl>
+<dt><code>T</code></dt><dd>
+<div class="block">The type of object, which is represented in XML format.</div>
+</dd></dl>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+<dt><code>xml</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a></dt><dd>
+<div class="block">The XML representation of the object.</div>
+</dd></dl>
+
+<h4 id="Return Value">Return Value</h4>
+
+<dl>
+<dt><a href="https://docs.microsoft.com/en-us/dotnet/api/t">T</a></dt><dd>
+<div class="block">The deserialized object.</div>
+</dd></dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table>
+<thead>
+<tr><th>Exception</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">System.ArgumentNullException</a></td><td><code>xml</code> is <code>null</code>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="See Also">See Also</h3>
+
+<ul>
+<li><a href="_toc.Assorted.Utils.html#Assorted.Utils.Serialization%20Namespace">Assorted.Utils.Serialization Namespace</a></li>
+<li><a href="Assorted.Utils.Serialization.XmlSerializer.html">XmlSerializer Class</a></li>
+</ul>
+
+<h2 id="Deserialize&lt;T&gt;(TextReader)">Deserialize&lt;T&gt;(TextReader)</h2>
+
+<div class="block">Deserializes the XML document contained by the specified <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.textreader"><code>System.IO.TextReader</code></a>.</div>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="prettyprint lang-csharp">public virtual T Deserialize&lt;T&gt;(TextReader reader)</pre>
+
+<h4 id="Type Parameters">Type Parameters</h4>
+
+<dl>
+<dt><code>T</code></dt><dd>
+<div class="block">The type of object, which is represented in XML format.</div>
+</dd></dl>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+<dt><code>reader</code>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.textreader">TextReader</a></dt><dd>
+<div class="block">A <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.textreader"><code>System.IO.TextReader</code></a> object to read the XML representation of the object from.</div>
+</dd></dl>
+
+<h4 id="Return Value">Return Value</h4>
+
+<dl>
+<dt><a href="https://docs.microsoft.com/en-us/dotnet/api/t">T</a></dt><dd>
+<div class="block">The object being deserialized.</div>
+</dd></dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table>
+<thead>
+<tr><th>Exception</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">System.ArgumentNullException</a></td><td><code>reader</code> is <code>null</code>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="See Also">See Also</h3>
+
+<ul>
+<li><a href="_toc.Assorted.Utils.html#Assorted.Utils.Serialization%20Namespace">Assorted.Utils.Serialization Namespace</a></li>
+<li><a href="Assorted.Utils.Serialization.XmlSerializer.html">XmlSerializer Class</a></li>
+</ul>
+
+<hr/>
+<footer>
+<em>This document is generated by <a href="https://github.com/Khojasteh/dg">DG</a>.</em>
+</footer>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" type="text/javascript"></script>
+</body>
+</html>

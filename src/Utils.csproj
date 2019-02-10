@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Optimize>true</Optimize>
+    <RootNamespace>Assorted.Utils</RootNamespace>
+    <AssemblyName>Assorted.Utils</AssemblyName>
+    <DocumentationFile>bin/$(Configuration)/$(TargetFramework)/Assorted.Utils.xml</DocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright (c) 2019 Kambiz Khojasteh</Copyright>
+    <RepositoryUrl>https://github.com/Khojasteh/assorted-utils</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>.NET Standard;Helpers;Utils</PackageTags>
+    <Description>A set of assorted helper functions, extensions and classes in .NET Standard</Description>
+    <Authors>Kambiz Khojasteh</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Debug" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <!--
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="dg -m -x -d=$(SolutionDir)/docs $(TargetPath)" />
+  </Target>
+  -->
+
+</Project>
