@@ -25,7 +25,7 @@ The library contains the following namespaces:
   - implementation of [Knuth–Morris–Pratt](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) string-search algorithm.
   - a string stream class
 
-You will find the detailed documentation of the library at [https://khojasteh.github.io/assorted-utils](https://khojasteh.github.io/assorted-utils/index.md).
+You will find the detailed documentation of the library [here](https://github.com/Khojasteh/assorted-utils/blob/master/docs/index.md).
 
 ## Contribution
 
