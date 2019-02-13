@@ -23,7 +23,7 @@
 
   <!--
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dg -m -x -d=$(SolutionDir)/docs $(TargetPath)" />
+    <Exec Command="dg -f -i=index -d=$(ProjectDir)/../docs $(TargetPath)" />
   </Target>
   -->
 

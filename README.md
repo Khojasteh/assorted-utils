@@ -18,15 +18,15 @@ The library contains the following namespaces:
   - classes for generating recurring date patterns
 - `Assorted.Utils.Serialization`
   - helper objects for serializing/deserializing object to/from XML, JSON and binary formats
-  - functions and extensions for converting primitieve values to and from string in a culture indipendent format
+  - functions and extensions for converting primitive values to and from string in a culture independent format
 - `Assorted.Utils.Text`
   - various extensions for manipulating strings
   - extension methods for calculating [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance), [Jaro](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) and [Jaro-Winkler](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) distance between two strings
   - implementation of [Knuth–Morris–Pratt](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) string-search algorithm.
   - a string stream class
 
-You will find the detailed documentation of the library [here](https://github.com/Khojasteh/assorted-utils/blob/master/docs/markdown/_toc.Assorted.Utils.md).
+You will find the detailed documentation of the library at [https://khojasteh.github.io/assorted-utils](https://khojasteh.github.io/assorted-utils/index.md).
 
 ## Contribution
 
-If you have ideas to improve the functionallity or code quality of this library, please don't hesitate to share it here by making a pull request.
+If you have ideas to improve the functionality or code quality of this library, please don't hesitate to share it here by making a pull request.
