@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 using System.Collections.Generic;
 
@@ -10,18 +14,18 @@ namespace Assorted.Utils.Text
     public static class StringExtensions
     {
         /// <summary>
-        /// Returns the substrings in this string that are delimited by a specified Unicode character. 
+        /// Returns the substrings in this string that are delimited by a specified Unicode character.
         /// </summary>
         /// <param name="source">The source string.</param>
         /// <param name="separator">A Unicode character that delimits the substrings in this string.</param>
         /// <param name="options">
-        /// <see cref="StringSplitOptions.RemoveEmptyEntries"/> to omit empty substrings from the result; 
+        /// <see cref="StringSplitOptions.RemoveEmptyEntries"/> to omit empty substrings from the result;
         /// or <see cref="StringSplitOptions.None"/> to include empty substring in the result.
         /// </param>
         /// <returns>An <see cref="IEnumerable{T}"/> that contains the substrings.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public static IEnumerable<string> LazySplit(this string source, char separator, StringSplitOptions options = StringSplitOptions.None)
@@ -47,7 +51,7 @@ namespace Assorted.Utils.Text
         }
 
         /// <summary>
-        /// Splits the string at the first occurrence of a specified Unicode character and returns the 
+        /// Splits the string at the first occurrence of a specified Unicode character and returns the
         /// substrings before and after the separator.
         /// </summary>
         /// <param name="source">The source string.</param>
@@ -67,7 +71,7 @@ namespace Assorted.Utils.Text
         }
 
         /// <summary>
-        /// Splits the string at the first occurrence of a specified string and returns the substrings before 
+        /// Splits the string at the first occurrence of a specified string and returns the substrings before
         /// and after the separator.
         /// </summary>
         /// <param name="source">The source string.</param>
@@ -90,7 +94,7 @@ namespace Assorted.Utils.Text
         }
 
         /// <summary>
-        /// Retrieves a substring from this instance. The substring starts after the first occurrence of 
+        /// Retrieves a substring from this instance. The substring starts after the first occurrence of
         /// a specified Unicode character and continues to the end of the string.
         /// </summary>
         /// <param name="source">The source string.</param>
@@ -107,7 +111,7 @@ namespace Assorted.Utils.Text
         }
 
         /// <summary>
-        /// Retrieves a substring from this instance. The substring starts after the first occurrence of 
+        /// Retrieves a substring from this instance. The substring starts after the first occurrence of
         /// a specified string and continues to the end of the string.
         /// </summary>
         /// <param name="source">The source string.</param>
@@ -125,7 +129,7 @@ namespace Assorted.Utils.Text
         }
 
         /// <summary>
-        /// Retrieves a substring from this instance. The substring starts after the last occurrence of 
+        /// Retrieves a substring from this instance. The substring starts after the last occurrence of
         /// a specified Unicode character and continues to the end of the string.
         /// </summary>
         /// <param name="source">The source string.</param>
@@ -142,7 +146,7 @@ namespace Assorted.Utils.Text
         }
 
         /// <summary>
-        /// Retrieves a substring from this instance. The substring starts after the last occurrence of 
+        /// Retrieves a substring from this instance. The substring starts after the last occurrence of
         /// a specified string and continues to the end of the string.
         /// </summary>
         /// <param name="source">The source string.</param>
@@ -235,7 +239,7 @@ namespace Assorted.Utils.Text
         /// <param name="source">The source string.</param>
         /// <param name="other">The other string.</param>
         /// <returns>
-        /// A <see cref="Tuple{T1, T2}"/> that contains the number of leading and trailing matched 
+        /// A <see cref="Tuple{T1, T2}"/> that contains the number of leading and trailing matched
         /// Unicode characters.
         /// </returns>
         /// <exception cref="ArgumentNullException">
@@ -270,15 +274,15 @@ namespace Assorted.Utils.Text
         /// <param name="source">The source string.</param>
         /// <param name="other">The other string.</param>
         /// <returns>
-        /// A value between <c>0</c> and <c>1</c> such that <c>0</c> equates to no similarity 
+        /// A value between <c>0</c> and <c>1</c> such that <c>0</c> equates to no similarity
         /// and <c>1</c> is an exact match.
         /// </returns>
         /// <exception cref="ArgumentNullException">
         /// <paramref name="source"/> or <paramref name="other"/> is <see langword="null"/>.
         /// </exception>
         /// <remarks>
-        /// The Damerau-Levenshtein distance is defined as the minimum number of primitive edit operations 
-        /// needed to transform one text into the other and these operations are substitution, deletion, 
+        /// The Damerau-Levenshtein distance is defined as the minimum number of primitive edit operations
+        /// needed to transform one text into the other and these operations are substitution, deletion,
         /// insertion and the transposition of two adjacent characters.
         /// </remarks>
         /// <seealso cref="JaroSimilarityTo"/>
@@ -342,7 +346,7 @@ namespace Assorted.Utils.Text
         /// <param name="source">The source string.</param>
         /// <param name="other">The other string.</param>
         /// <returns>
-        /// A value between <c>0</c> and <c>1</c> such that <c>0</c> equates to no similarity 
+        /// A value between <c>0</c> and <c>1</c> such that <c>0</c> equates to no similarity
         /// and <c>1</c> is an exact match.
         /// </returns>
         /// <exception cref="ArgumentNullException">
@@ -406,7 +410,7 @@ namespace Assorted.Utils.Text
         /// <param name="other">The other string.</param>
         /// <param name="maxPrefixLength">The maximum length of common prefixes.</param>
         /// <returns>
-        /// A value between <c>0</c> and <c>1</c> such that <c>0</c> equates to no similarity 
+        /// A value between <c>0</c> and <c>1</c> such that <c>0</c> equates to no similarity
         /// and <c>1</c> is an exact match.
         /// </returns>
         /// <exception cref="ArgumentNullException">

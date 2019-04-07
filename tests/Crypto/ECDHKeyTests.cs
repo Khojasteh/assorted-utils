@@ -1,4 +1,8 @@
-﻿#if NET471
+﻿// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
+#if NET471
 using NUnit.Framework;
 using System;
 using System.Security.Cryptography;

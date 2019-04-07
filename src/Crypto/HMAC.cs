@@ -1,9 +1,13 @@
-﻿using System;
+﻿// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
+using System;
 
 namespace Assorted.Utils.Crypto
 {
     /// <summary>
-    /// This class provides access to the concrete and singleton instances of the <see cref="KeyedHasher"/> class 
+    /// This class provides access to the concrete and singleton instances of the <see cref="KeyedHasher"/> class
     /// for the most common HMAC hashing algorithms.
     /// </summary>
     /// <threadsafety/>

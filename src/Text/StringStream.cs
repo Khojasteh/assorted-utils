@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 using System.IO;
 
@@ -20,7 +24,7 @@ namespace Assorted.Utils.Text
             : this(System.Text.Encoding.UTF8) { }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="StringStream"/> class with an expandable capacity 
+        /// Initializes a new instance of <see cref="StringStream"/> class with an expandable capacity
         /// using the <see cref="System.Text.Encoding.UTF8"/> encoding.
         /// </summary>
         /// <param name="encoding">
@@ -28,13 +32,13 @@ namespace Assorted.Utils.Text
         /// the <see cref="System.Text.Encoding.UTF8"/> encoding will be used.
         /// </param>
         public StringStream(System.Text.Encoding encoding)
-            : base() 
+            : base()
         {
             Encoding = encoding ?? System.Text.Encoding.UTF8;
         }
 
         /// <summary>
-        /// Initializes a new a new non-resizable instance of <see cref="StringStream"/> class based on 
+        /// Initializes a new a new non-resizable instance of <see cref="StringStream"/> class based on
         /// the specified string and using the <see cref="System.Text.Encoding.UTF8"/> encoding.
         /// </summary>
         /// <param name="value">
@@ -45,7 +49,7 @@ namespace Assorted.Utils.Text
             : this(value, System.Text.Encoding.UTF8) { }
 
         /// <summary>
-        /// Initializes a new a new non-resizable instance of <see cref="StringStream"/> class based on 
+        /// Initializes a new a new non-resizable instance of <see cref="StringStream"/> class based on
         /// the specified string and using the specified encoding.
         /// </summary>
         /// <param name="value">
@@ -57,8 +61,8 @@ namespace Assorted.Utils.Text
         /// the <see cref="System.Text.Encoding.UTF8"/> encoding will be used.
         /// </param>
         public StringStream(string value, System.Text.Encoding encoding)
-            : base(string.IsNullOrEmpty(value) ? Array.Empty<byte>() : (encoding ?? System.Text.Encoding.UTF8).GetBytes(value)) 
-        { 
+            : base(string.IsNullOrEmpty(value) ? Array.Empty<byte>() : (encoding ?? System.Text.Encoding.UTF8).GetBytes(value))
+        {
             Encoding = encoding ?? System.Text.Encoding.UTF8;
         }
 

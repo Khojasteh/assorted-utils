@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +17,7 @@ namespace Assorted.Utils.Collections
         /// Gets the value that is associated with a specified key.
         /// </overloads>
         /// <summary>
-        /// Gets the value that is associated with a specified key. Returns a specific value if the key 
+        /// Gets the value that is associated with a specified key. Returns a specific value if the key
         /// is not found.
         /// </summary>
         /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
@@ -26,7 +30,7 @@ namespace Assorted.Utils.Collections
         /// is not found; otherwise, the found value.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
-        public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> source, 
+        public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> source,
             TKey key, TValue defaultValue = default)
         {
             Contract.Requires<ArgumentNullException>(source != null, nameof(source));
@@ -73,7 +77,7 @@ namespace Assorted.Utils.Collections
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> or <paramref name="keys"/> is <see langword="null"/>.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public static IEnumerable<TValue> GetValuesFor<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> source, IEnumerable<TKey> keys)
@@ -105,10 +109,10 @@ namespace Assorted.Utils.Collections
         /// <returns>A <see cref="IEnumerable{T}"/> that contains the values associated with the specified <paramref name="keys"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> or <paramref name="keys"/> is <see langword="null"/>.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
-        public static IEnumerable<TValue> GetValuesFor<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> source, 
+        public static IEnumerable<TValue> GetValuesFor<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> source,
             IEnumerable<TKey> keys, TValue defaultValue)
         {
             Contract.Requires<ArgumentNullException>(source != null, nameof(source));
@@ -157,7 +161,7 @@ namespace Assorted.Utils.Collections
         }
 
         /// <summary>
-        /// Performs an action on each value in the dictionary with the specified keys. The existing and missing keys 
+        /// Performs an action on each value in the dictionary with the specified keys. The existing and missing keys
         /// have their own actions.
         /// </summary>
         /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>

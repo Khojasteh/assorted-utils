@@ -1,4 +1,8 @@
-﻿using NUnit.Framework;
+﻿// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
@@ -173,7 +177,7 @@ namespace Assorted.Utils.Collections.Tests
             var keysNotFound = new List<string>();
             var sum = 0;
 
-            dic.ForEach(new[] { "Z", "X", "NOT_EXISTING_KEY" }, 
+            dic.ForEach(new[] { "Z", "X", "NOT_EXISTING_KEY" },
                 hitAction: (key, value) =>
                 {
                     keysFound.Add(key);

@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
+using System;
 using System.Globalization;
 using System.Linq;
 
@@ -11,13 +15,13 @@ namespace Assorted.Utils.Serialization
     public static class ConvertUtils
     {
         /// <summary>
-        /// Converts the specified standard string representation of an enumerated constant to its 
+        /// Converts the specified standard string representation of an enumerated constant to its
         /// <see cref="Enum"/> equivalent. The leading and trailing white spaces are ignored.
         /// </summary>
         /// <typeparam name="TEnum">The enumeration type to which to convert value.</typeparam>
         /// <param name="value">The string representation of an enumeration name or its underlying value.</param>
         /// <returns>
-        /// An <see cref="Enum"/> of type <typeparamref name="TEnum"/> whose value is represented 
+        /// An <see cref="Enum"/> of type <typeparamref name="TEnum"/> whose value is represented
         /// by <paramref name="value"/> if the operation succeeds; otherwise, <see langword="null"/>.
         /// </returns>
         public static TEnum? StrToEnum<TEnum>(string value)
@@ -39,7 +43,7 @@ namespace Assorted.Utils.Serialization
         /// </summary>
         /// <param name="value">The string representation of a logical value.</param>
         /// <returns>
-        /// A boolean whose value is represented by <paramref name="value"/> if the operation succeeds; 
+        /// A boolean whose value is represented by <paramref name="value"/> if the operation succeeds;
         /// otherwise, <see langword="null"/>.
         /// </returns>
         public static bool? StrToBool(string value)
@@ -63,7 +67,7 @@ namespace Assorted.Utils.Serialization
         /// </summary>
         /// <param name="value">The string representation of an integer value.</param>
         /// <returns>
-        /// A signed 8-bit integer number whose value is represented by <paramref name="value"/> if 
+        /// A signed 8-bit integer number whose value is represented by <paramref name="value"/> if
         /// the operation succeeds; otherwise, <see langword="null"/>.
         /// </returns>
         public static sbyte? StrToInt8(string value)
@@ -199,7 +203,7 @@ namespace Assorted.Utils.Serialization
         /// </summary>
         /// <param name="value">The string representation of a real value.</param>
         /// <returns>
-        /// A single-precision floating-point number whose value is represented by <paramref name="value"/> 
+        /// A single-precision floating-point number whose value is represented by <paramref name="value"/>
         /// if the operation succeeds; otherwise, <see langword="null"/>.
         /// </returns>
         public static float? StrToSingle(string value)
@@ -216,7 +220,7 @@ namespace Assorted.Utils.Serialization
         /// </summary>
         /// <param name="value">The string representation of a real value.</param>
         /// <returns>
-        /// A double-precision floating-point number whose value is represented by <paramref name="value"/> 
+        /// A double-precision floating-point number whose value is represented by <paramref name="value"/>
         /// if the operation succeeds; otherwise, <see langword="null"/>.
         /// </returns>
         public static double? StrToDouble(string value)
@@ -233,7 +237,7 @@ namespace Assorted.Utils.Serialization
         /// </summary>
         /// <param name="value">The string representation of a real value.</param>
         /// <returns>
-        /// A decimal number whose value is represented by <paramref name="value"/> if the operation succeeds; 
+        /// A decimal number whose value is represented by <paramref name="value"/> if the operation succeeds;
         /// otherwise, <see langword="null"/>.
         /// </returns>
         public static decimal? StrToDecimal(string value)
@@ -250,7 +254,7 @@ namespace Assorted.Utils.Serialization
         /// </summary>
         /// <param name="value">The string representation of a date in <c>"yyyy'-'MM'-'dd"</c> format.</param>
         /// <returns>
-        /// A <see cref="DateTime"/> whose value is represented by <paramref name="value"/> if the operation 
+        /// A <see cref="DateTime"/> whose value is represented by <paramref name="value"/> if the operation
         /// succeeds; otherwise, <see langword="null"/>.
         /// </returns>
         public static DateTime? StrToDate(string value)
@@ -277,7 +281,7 @@ namespace Assorted.Utils.Serialization
         /// </list>
         /// </param>
         /// <returns>
-        /// A <see cref="DateTime"/> whose value is represented by <paramref name="value"/> if the operation 
+        /// A <see cref="DateTime"/> whose value is represented by <paramref name="value"/> if the operation
         /// succeeds; otherwise, <see langword="null"/>.
         /// </returns>
         public static DateTime? StrToTime(string value)
@@ -298,7 +302,7 @@ namespace Assorted.Utils.Serialization
         }
 
         /// <summary>
-        /// Converts the specified standard string representation of a date and time to its <see cref="DateTime"/> 
+        /// Converts the specified standard string representation of a date and time to its <see cref="DateTime"/>
         /// equivalent. The leading and trailing white spaces are ignored.
         /// </summary>
         /// <param name="value">
@@ -312,7 +316,7 @@ namespace Assorted.Utils.Serialization
         /// </list>
         /// </param>
         /// <returns>
-        /// A <see cref="DateTime"/> whose value is represented by <paramref name="value"/> if the operation 
+        /// A <see cref="DateTime"/> whose value is represented by <paramref name="value"/> if the operation
         /// succeeds; otherwise, <see langword="null"/>.
         /// </returns>
         public static DateTime? StrToDateTime(string value)
@@ -350,7 +354,7 @@ namespace Assorted.Utils.Serialization
         /// </list>
         /// </param>
         /// <returns>
-        /// A <see cref="DateTimeOffset"/> whose value is represented by <paramref name="value"/> if the operation 
+        /// A <see cref="DateTimeOffset"/> whose value is represented by <paramref name="value"/> if the operation
         /// succeeds; otherwise, <see langword="null"/>.
         /// </returns>
         public static DateTimeOffset? StrToDateTimeOffset(string value)

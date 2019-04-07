@@ -1,18 +1,22 @@
-﻿using System;
+﻿// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
+using System;
 using System.Globalization;
 using System.Linq;
 
 namespace Assorted.Utils.Serialization
 {
     /// <summary>
-    /// Extends primitive data types by adding the <c>ToStandardString()</c> method to them. 
+    /// Extends primitive data types by adding the <c>ToStandardString()</c> method to them.
     /// The method returns the string representation of the extended objects in culture independent format.
     /// </summary>
     /// <threadsafety/>
     public static class ConvertExtensions
     {
         /// <summary>
-        /// Returns the standard string representation of the underlying numeric value of the specified 
+        /// Returns the standard string representation of the underlying numeric value of the specified
         /// enumeration value.
         /// </summary>
         /// <param name="value">The enumeration value to represent as string.</param>

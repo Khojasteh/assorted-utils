@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
+using System;
 
 namespace Assorted.Utils.Crypto
 {
@@ -33,12 +37,12 @@ namespace Assorted.Utils.Crypto
         }
 
         /// <summary>
-        /// Converts the numeric value of each element of a specified array of bytes to its equivalent 
+        /// Converts the numeric value of each element of a specified array of bytes to its equivalent
         /// hexadecimal string representation.
         /// </summary>
         /// <param name="bytes">An array of bytes.</param>
         /// <returns>
-        /// A string of hexadecimal pairs, where each pair represents the corresponding element in 
+        /// A string of hexadecimal pairs, where each pair represents the corresponding element in
         /// the <paramref name="bytes"/> array.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="bytes"/> is <see langword="null"/>.</exception>

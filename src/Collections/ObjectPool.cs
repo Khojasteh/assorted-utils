@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 using System.Collections.Concurrent;
 using System.Threading;
@@ -21,7 +25,7 @@ namespace Assorted.Utils.Collections
         /// Initializes a new instance of <see cref="ObjectPool{T}"/> class.
         /// </overloads>
         /// <summary>
-        /// Initializes a new instance of <see cref="ObjectPool{T}"/> class without an upper bound capacity. 
+        /// Initializes a new instance of <see cref="ObjectPool{T}"/> class without an upper bound capacity.
         /// When a new object needs to be initialized, the default constructor of the target type is used.
         /// </summary>
         public ObjectPool()
@@ -208,18 +212,18 @@ namespace Assorted.Utils.Collections
         /// Disposes the specified object if it implements the <see cref="IDisposable"/> interface.
         /// </summary>
         /// <param name="obj">The object to be disposed.</param>
-        protected virtual void DisposeObject(T obj) 
+        protected virtual void DisposeObject(T obj)
         {
             if (obj is IDisposable disposable)
                 disposable.Dispose();
         }
 
         /// <summary>
-        /// Releases the unmanaged resources used by the <see cref="ObjectPool{T}"/> and 
+        /// Releases the unmanaged resources used by the <see cref="ObjectPool{T}"/> and
         /// optionally releases the managed resources.
         /// </summary>
         /// <param name="disposing">
-        /// <see langword="true"/> to release both managed and unmanaged resources; 
+        /// <see langword="true"/> to release both managed and unmanaged resources;
         /// <see langword="false"/> to release only unmanaged resources.
         /// </param>
         protected virtual void Dispose(bool disposing)

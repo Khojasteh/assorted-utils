@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 using System.Collections.Generic;
 
@@ -19,7 +23,7 @@ namespace Assorted.Utils.Dates.Patterns
         /// </summary>
         /// <param name="interval">The interval of occurrences in number of days.</param>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="interval"/> is less than 1.</exception>
-        public DailyPattern(int interval = 1) 
+        public DailyPattern(int interval = 1)
         {
             Contract.Requires<ArgumentOutOfRangeException>(interval >= 1, nameof(interval));
 
@@ -32,11 +36,11 @@ namespace Assorted.Utils.Dates.Patterns
         /// <param name="start">The date when the recurring pattern starts.</param>
         /// <returns>
         /// An <see cref="IEnumerable{T}"/> that contains the recurrent dates.
-        /// The <see cref="DateTime.TimeOfDay"/> and <see cref="DateTime.Kind"/> of the <paramref name="start"/> date 
+        /// The <see cref="DateTime.TimeOfDay"/> and <see cref="DateTime.Kind"/> of the <paramref name="start"/> date
         /// is preserved in the returned dates.
         /// </returns>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public IEnumerable<DateTime> GetRecurrencesStartingAt(DateTime start)
@@ -62,14 +66,14 @@ namespace Assorted.Utils.Dates.Patterns
         /// </summary>
         /// <param name="obj">The <see cref="object"/> to compare to this instance.</param>
         /// <returns>
-        /// <see langword="true"/> if <paramref name="obj"/> is type of <see cref="DailyPattern"/> and equals to this instance; 
+        /// <see langword="true"/> if <paramref name="obj"/> is type of <see cref="DailyPattern"/> and equals to this instance;
         /// otherwise, <see langword="false"/>. If <paramref name="obj"/> is <see langword="null"/>, the method returns <see langword="false"/>.
         /// </returns>
         public override bool Equals(object obj)
         {
             return (obj is DailyPattern other) && Equals(other);
         }
-    
+
         /// <summary>
         /// Returns the hash code for this instance.
         /// </summary>

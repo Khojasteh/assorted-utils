@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 using System.Collections.Generic;
 
@@ -14,11 +18,11 @@ namespace Assorted.Utils.Dates
         /// </summary>
         /// <param name="source">The days of the week.</param>
         /// <returns>
-        /// An <see cref="IEnumerable{T}"/> that contains <see cref="DayOfWeek"/> values found in the source 
+        /// An <see cref="IEnumerable{T}"/> that contains <see cref="DayOfWeek"/> values found in the source
         /// <see cref="DaysOfTheWeek"/> value.
         /// </returns>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public static IEnumerable<DayOfWeek> AsEnumerable(this DaysOfTheWeek source)
@@ -52,7 +56,7 @@ namespace Assorted.Utils.Dates
             var daysOfWeek = DaysOfTheWeek.None;
             foreach (var dayOfWeek in source)
                 daysOfWeek |= dayOfWeek.ToDaysOfWeek();
-                
+
             return daysOfWeek;
         }
 

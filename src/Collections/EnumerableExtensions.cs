@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,7 +26,7 @@ namespace Assorted.Utils.Collections
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="size"/> is zero or negative.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public static IEnumerable<IEnumerable<TSource>> Partition<TSource>(this IEnumerable<TSource> source, int size)
@@ -63,7 +67,7 @@ namespace Assorted.Utils.Collections
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="interval"/> is zero or negative.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public static IEnumerable<TSource> Alternate<TSource>(this IEnumerable<TSource> source, int interval)
@@ -99,7 +103,7 @@ namespace Assorted.Utils.Collections
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="times"/> is negative.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public static IEnumerable<TSource> Cycle<TSource>(this IEnumerable<TSource> source, int times)
@@ -128,7 +132,7 @@ namespace Assorted.Utils.Collections
         /// <returns>An <see cref="IEnumerable{T}"/> where each of its elements are in the input sequence.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         /// <seealso cref="RotateRight" />
@@ -186,7 +190,7 @@ namespace Assorted.Utils.Collections
         /// <returns>An <see cref="IEnumerable{T}"/> where each of its elements are in the input sequence.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         /// <seealso cref="RotateLeft" />
@@ -223,7 +227,7 @@ namespace Assorted.Utils.Collections
         /// <returns>An <see cref="IEnumerable{T}"/> where each of its elements are in the input sequence.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public static IEnumerable<TSource> Shuffle<TSource>(this IEnumerable<TSource> source)
@@ -254,7 +258,7 @@ namespace Assorted.Utils.Collections
         /// <returns>An <see cref="IEnumerable{TSource}"/> where the <paramref name="action"/> is applied on its elements.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> or <paramref name="action"/> is <see langword="null"/>.</exception>
         /// <remarks>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </remarks>
         public static IEnumerable<TSource> Apply<TSource>(this IEnumerable<TSource> source, Action<TSource> action)
@@ -297,7 +301,7 @@ namespace Assorted.Utils.Collections
         /// <typeparam name="TSource">The type of elements in the <paramref name="source"/>.</typeparam>
         /// <param name="source">A sequence of values.</param>
         /// <returns>
-        /// The <paramref name="source"/> sequence if it is already an array; 
+        /// The <paramref name="source"/> sequence if it is already an array;
         /// otherwise, an array that contains values from the input sequence.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
@@ -315,7 +319,7 @@ namespace Assorted.Utils.Collections
         /// <typeparam name="TSource">The type of elements in the <paramref name="source"/>.</typeparam>
         /// <param name="source">A sequence of values.</param>
         /// <returns>
-        /// The <paramref name="source"/> sequence if it is already a read-only collection; 
+        /// The <paramref name="source"/> sequence if it is already a read-only collection;
         /// otherwise, an <see cref="IReadOnlyCollection{T}"/> that contains values from the input sequence.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
@@ -327,13 +331,13 @@ namespace Assorted.Utils.Collections
         }
 
         /// <summary>
-        /// Executes the deferred operations of the sequence if there is any, and returns the evaluated sequence 
+        /// Executes the deferred operations of the sequence if there is any, and returns the evaluated sequence
         /// as a read-only list.
         /// </summary>
         /// <typeparam name="TSource">The type of elements in the <paramref name="source"/>.</typeparam>
         /// <param name="source">A sequence of values.</param>
         /// <returns>
-        /// The <paramref name="source"/> sequence if it is already a read-only list; 
+        /// The <paramref name="source"/> sequence if it is already a read-only list;
         /// otherwise, an <see cref="IReadOnlyList{T}"/> that contains values from the input sequence.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
@@ -345,13 +349,13 @@ namespace Assorted.Utils.Collections
         }
 
         /// <summary>
-        /// Executes the deferred operations of the sequence if there is any, and returns the unique elements of 
+        /// Executes the deferred operations of the sequence if there is any, and returns the unique elements of
         /// the evaluated sequence as a set.
         /// </summary>
         /// <typeparam name="TSource">The type of elements in the <paramref name="source"/>.</typeparam>
         /// <param name="source">A sequence of values.</param>
         /// <returns>
-        /// The <paramref name="source"/> sequence if it is already a set; 
+        /// The <paramref name="source"/> sequence if it is already a set;
         /// otherwise, an <see cref="ISet{T}"/> that contains values from the input sequence.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
@@ -378,7 +382,7 @@ namespace Assorted.Utils.Collections
             {
                 list.AddRange(source);
             }
-            else 
+            else
             {
                 foreach (var current in source)
                     collection.Add(current);
@@ -409,8 +413,8 @@ namespace Assorted.Utils.Collections
         /// <param name="other">The sequence to calculate the edit distance to.</param>
         /// <returns>The distance as a non-negative integer where zero indicates that both sequences are equal.</returns>
         /// <remarks>
-        /// The Damerau-Levenshtein distance is defined as the minimum number of primitive edit operations 
-        /// needed to transform one sequence into the other and these operations are substitution, deletion, 
+        /// The Damerau-Levenshtein distance is defined as the minimum number of primitive edit operations
+        /// needed to transform one sequence into the other and these operations are substitution, deletion,
         /// insertion and the transposition of two adjacent elements.
         /// </remarks>
         public static int DamerauLevenshteinDistance<TSource>(this IEnumerable<TSource> source, IEnumerable<TSource> other)

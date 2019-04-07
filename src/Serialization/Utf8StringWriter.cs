@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 using System.IO;
 using System.Text;
@@ -16,7 +20,7 @@ namespace Assorted.Utils.Serialization
         /// <summary>
         /// Initializes a new instance of the <see cref="Utf8StringWriter"/> class.
         /// </summary>
-        public Utf8StringWriter() 
+        public Utf8StringWriter()
             : base() { }
 
         /// <summary>
@@ -47,7 +51,7 @@ namespace Assorted.Utils.Serialization
             : base(sb, formatProvider) { }
 
         /// <summary>
-        /// Gets the <see cref="Encoding"/> in which the output is written. 
+        /// Gets the <see cref="Encoding"/> in which the output is written.
         /// </summary>
         /// <value>
         /// The <see cref="Encoding"/> of a <see cref="Utf8StringWriter"/> object is always <see cref="Encoding.UTF8"/>.

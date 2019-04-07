@@ -1,4 +1,7 @@
-﻿
+﻿// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -45,7 +48,7 @@ namespace Assorted.Utils.Text.Tests
                 stream.Position = 0;
                 stream.Read(bytes, 0, bytes.Length);
                 Assert.That(stream.Encoding.GetString(bytes), Is.EqualTo(data));
-                
+
                 var oldCapacity = stream.Capacity;
                 stream.Capacity += 100;
                 Assert.That(stream.Capacity, Is.EqualTo(oldCapacity + 100));

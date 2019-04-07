@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 #if NET471
 using System;
 using System.Security.Cryptography;
@@ -14,17 +18,17 @@ namespace Assorted.Utils.Crypto
     public class ECDHKey : IDisposable
     {
         /// <overloads>
-        /// Initializes a new instance of <see cref="ECDHKey"/> class. 
+        /// Initializes a new instance of <see cref="ECDHKey"/> class.
         /// </overloads>
         /// <summary>
-        /// Initializes a new instance of <see cref="ECDHKey"/> class, using Elliptic Curve Diffie-Hellmann P-256. 
+        /// Initializes a new instance of <see cref="ECDHKey"/> class, using Elliptic Curve Diffie-Hellmann P-256.
         /// </summary>
         /// <param name="keyName">The name of the key, if the key should be persisted.</param>
         public ECDHKey(string keyName = null)
             : this(CngAlgorithm.ECDiffieHellmanP256, keyName) { }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="ECDHKey"/> class, using the specified curve algorithm. 
+        /// Initializes a new instance of <see cref="ECDHKey"/> class, using the specified curve algorithm.
         /// </summary>
         /// <param name="algorithm">The algorithm the key will be used with.</param>
         /// <param name="keyName">The name of the key, if the key should be persisted.</param>
@@ -94,11 +98,11 @@ namespace Assorted.Utils.Crypto
         }
 
         /// <summary>
-        /// Releases the unmanaged resources used by the <see cref="ECDHKey"/>, and optionally disposes 
+        /// Releases the unmanaged resources used by the <see cref="ECDHKey"/>, and optionally disposes
         /// of the managed resources.
         /// </summary>
         /// <param name="disposing">
-        /// <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to 
+        /// <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to
         /// releases only unmanaged resources.
         /// </param>
         protected virtual void Dispose(bool disposing)
@@ -108,7 +112,7 @@ namespace Assorted.Utils.Crypto
         }
 
         /// <summary>
-        /// Loads or creates a cryptography key for the specified algorithm. 
+        /// Loads or creates a cryptography key for the specified algorithm.
         /// </summary>
         /// <param name="keyName">The name of the key, if the key should be persisted.</param>
         /// <param name="algorithm">The algorithm the key will be used with.</param>
@@ -122,7 +126,7 @@ namespace Assorted.Utils.Crypto
             Contract.Requires<ArgumentNullException>(algorithm != null, nameof(algorithm));
 
             if (keyName != null && CngKey.Exists(keyName, CngProvider.MicrosoftSoftwareKeyStorageProvider))
-            { 
+            {
                 var key = CngKey.Open(keyName, CngProvider.MicrosoftSoftwareKeyStorageProvider);
                 if (algorithm.Equals(key.Algorithm))
                     return key;

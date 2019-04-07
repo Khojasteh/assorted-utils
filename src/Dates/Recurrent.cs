@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
 using System;
 
 namespace Assorted.Utils.Dates
@@ -69,7 +73,7 @@ namespace Assorted.Utils.Dates
         }
 
         /// <summary>
-        /// Returns a monthly reoccurring pattern when events occur on one of the specified days of the week and a 
+        /// Returns a monthly reoccurring pattern when events occur on one of the specified days of the week and a
         /// specific week of the month.
         /// </summary>
         /// <param name="weekOfMonth">The week of the month when the event occurs.</param>
@@ -77,13 +81,13 @@ namespace Assorted.Utils.Dates
         /// <param name="interval">The interval of occurrences in number of months.</param>
         /// <returns>An instance of <see cref="MonthlyWeekPattern"/> class.</returns>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="interval"/> is less than 1.</exception>
-        public static MonthlyWeekPattern Monthly(WeekOfMonth weekOfMonth, DaysOfTheWeek daysOfWeek, int interval = 1) 
+        public static MonthlyWeekPattern Monthly(WeekOfMonth weekOfMonth, DaysOfTheWeek daysOfWeek, int interval = 1)
         {
             return new MonthlyWeekPattern(weekOfMonth, daysOfWeek, interval);
         }
 
         /// <summary>
-        /// Returns a monthly reoccurring pattern when events occur on a specific day of the week and a 
+        /// Returns a monthly reoccurring pattern when events occur on a specific day of the week and a
         /// specific week of the month.
         /// </summary>
         /// <param name="weekOfMonth">The week of the month when the event occurs.</param>
@@ -100,7 +104,7 @@ namespace Assorted.Utils.Dates
         /// Returns a yearly reoccurring pattern.
         /// </overloads>
         /// <summary>
-        /// Returns a yearly reoccurring pattern when events occur on a specific day of the month and a 
+        /// Returns a yearly reoccurring pattern when events occur on a specific day of the month and a
         /// specific month of the year.
         /// </summary>
         /// <param name="monthOfYear">The month when the event occurs.</param>
@@ -118,7 +122,7 @@ namespace Assorted.Utils.Dates
         }
 
         /// <summary>
-        /// Returns a yearly reoccurring pattern when events occur on a specific day of the month and a 
+        /// Returns a yearly reoccurring pattern when events occur on a specific day of the month and a
         /// specific month of the year.
         /// </summary>
         /// <param name="monthOfYear">The month when the event occurs.</param>
@@ -136,7 +140,7 @@ namespace Assorted.Utils.Dates
         }
 
         /// <summary>
-        /// Returns a yearly reoccurring pattern when events occur on one of the specified days of the week and a 
+        /// Returns a yearly reoccurring pattern when events occur on one of the specified days of the week and a
         /// specific week of a month of the year.
         /// </summary>
         /// <param name="weekOfMonth">The week of the month when the event occurs.</param>
@@ -151,7 +155,7 @@ namespace Assorted.Utils.Dates
         }
 
         /// <summary>
-        /// Returns a yearly reoccurring pattern when events occur on one of the specified days of the week and a 
+        /// Returns a yearly reoccurring pattern when events occur on one of the specified days of the week and a
         /// specific week of a month of the year.
         /// </summary>
         /// <param name="weekOfMonth">The week of the month when the event occurs.</param>
@@ -169,7 +173,7 @@ namespace Assorted.Utils.Dates
         }
 
         /// <summary>
-        /// Returns a yearly reoccurring pattern when events occur on a specific day of the week and a 
+        /// Returns a yearly reoccurring pattern when events occur on a specific day of the week and a
         /// specific week of a month of the year.
         /// </summary>
         /// <param name="weekOfMonth">The week of the month when the event occurs.</param>
@@ -184,7 +188,7 @@ namespace Assorted.Utils.Dates
         }
 
         /// <summary>
-        /// Returns a yearly reoccurring pattern when events occur on a specific day of the week and a 
+        /// Returns a yearly reoccurring pattern when events occur on a specific day of the week and a
         /// specific week of a month of the year.
         /// </summary>
         /// <param name="weekOfMonth">The week of the month when the event occurs.</param>

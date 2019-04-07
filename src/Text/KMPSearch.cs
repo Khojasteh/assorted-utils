@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Copyright (c) 2019 Kambiz Khojasteh
+// This file is part of the Assorted.Utils package which is released under the MIT software license.
+// See the accompanying file LICENSE.txt or go to http://www.opensource.org/licenses/mit-license.php.
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -48,7 +52,7 @@ namespace Assorted.Utils.Text
         /// This method is an <c>O(n)</c> operation, where <c>n</c> is the total length of strings.
         /// </para>
         /// <para>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </para>
         /// </remarks>
@@ -88,7 +92,7 @@ namespace Assorted.Utils.Text
         }
 
         /// <summary>
-        /// Reports the zero-based indexes of all occurrences of the <see cref="Target"/> string in the text 
+        /// Reports the zero-based indexes of all occurrences of the <see cref="Target"/> string in the text
         /// contained by a specific <see cref="TextReader"/> object.
         /// </summary>
         /// <param name="reader">
@@ -106,7 +110,7 @@ namespace Assorted.Utils.Text
         /// This method is an <c>O(n)</c> operation, where <c>n</c> is the total length of strings.
         /// </para>
         /// <para>
-        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all 
+        /// This method is implemented by using deferred execution. The immediate return value is an object that stores all
         /// the information that is required to perform the action.
         /// </para>
         /// </remarks>
