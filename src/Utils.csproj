@@ -7,13 +7,15 @@
     <RootNamespace>Assorted.Utils</RootNamespace>
     <AssemblyName>Assorted.Utils</AssemblyName>
     <DocumentationFile>bin/$(Configuration)/$(TargetFramework)/Assorted.Utils.xml</DocumentationFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright (c) 2019 Kambiz Khojasteh</Copyright>
+    <Company>Kampute</Company>
     <RepositoryUrl>https://github.com/Khojasteh/assorted-utils</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>.NET Standard;Helpers;Utils</PackageTags>
+    <PackageIconUrl>http://kampute.com/favicon.ico</PackageIconUrl>
     <Description>A set of assorted helper functions, extensions and classes in .NET Standard</Description>
     <Authors>Kambiz Khojasteh</Authors>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="Debug" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -21,9 +23,21 @@
     <Optimize>false</Optimize>
   </PropertyGroup>
 
+  <PropertyGroup Label="Release" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReleaseNotes>
+      Introduced a couple of new string extensions and a pool of StringBuilder objects.
+    </PackageReleaseNotes>
+    <!--
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Kambiz.Khojasteh.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    -->
+  </PropertyGroup>
+
   <!--
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dg -f -i=index -d=$(ProjectDir)/../docs $(TargetPath)" />
+    <Exec Command="dotnet ../../dg/src/bin/Release/netcoreapp2.2/dg.dll -f -i=index -d=$(ProjectDir)/../docs $(TargetPath)" />
   </Target>
   -->
 
