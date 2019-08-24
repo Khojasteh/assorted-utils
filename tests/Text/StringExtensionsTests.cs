@@ -81,6 +81,48 @@ namespace Assorted.Utils.Text.Tests
             return s.Partition(separator);
         }
 
+        static IEnumerable<TestCaseData> LastPartitionByCharacterTestCases()
+        {
+            yield return new TestCaseData("Head:Tail", ':')
+                .Returns(("Head", "Tail"));
+            yield return new TestCaseData(":Tail", ':')
+                .Returns(("", "Tail"));
+            yield return new TestCaseData("Head:", ':')
+                .Returns(("Head", ""));
+            yield return new TestCaseData("Head-Tail", ':')
+                .Returns((default(string), "Head-Tail"));
+            yield return new TestCaseData("", ':')
+                .Returns((default(string), ""));
+        }
+
+        [TestCaseSource(nameof(LastPartitionByCharacterTestCases))]
+        public (string, string) LastPartition_By_Character(string s, char separator)
+        {
+            return s.LastPartition(separator);
+        }
+
+        static IEnumerable<TestCaseData> LastPartitionByStringTestCases()
+        {
+            yield return new TestCaseData("Head<>Tail", "<>")
+                .Returns(("Head", "Tail"));
+            yield return new TestCaseData("<>Tail", "<>")
+                .Returns(("", "Tail"));
+            yield return new TestCaseData("Head<>", "<>")
+                .Returns(("Head", ""));
+            yield return new TestCaseData("Head-Tail", "<>")
+                .Returns((default(string), "Head-Tail"));
+            yield return new TestCaseData("", "<>")
+                .Returns((default(string), ""));
+            yield return new TestCaseData("Head<>Tail", "")
+                .Returns(("Head<>Tail", ""));
+        }
+
+        [TestCaseSource(nameof(LastPartitionByStringTestCases))]
+        public (string, string) LastPartition_By_String(string s, string separator)
+        {
+            return s.LastPartition(separator);
+        }
+
         static IEnumerable<TestCaseData> SubstringAfterCharacterTestCases()
         {
             yield return new TestCaseData("the.test", '.')

@@ -57,8 +57,8 @@ namespace Assorted.Utils.Text
         /// <param name="source">The source string.</param>
         /// <param name="separator">The separator Unicode character.</param>
         /// <returns>
-        /// A <see cref="Tuple{T1, T2}"/> containing the substring before and after the specified
-        /// <paramref name="separator"/> if the separator is found; otherwise, the first item in the tuple
+        /// A <see cref="Tuple{T1, T2}"/> containing the substring before and after the first occurrences of the
+        /// specified <paramref name="separator"/> if the separator is found; otherwise, the first item in the tuple
         /// is the <paramref name="source"/> string itself and the second item is <see langword="null"/>.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
@@ -77,8 +77,8 @@ namespace Assorted.Utils.Text
         /// <param name="source">The source string.</param>
         /// <param name="separator">The separator string.</param>
         /// <returns>
-        /// A <see cref="Tuple{T1, T2}"/> containing the substring before and after the specified
-        /// <paramref name="separator"/> if the separator is found; otherwise, the first item in the tuple
+        /// A <see cref="Tuple{T1, T2}"/> containing the substring before and after the first occurrences of the
+        /// specified <paramref name="separator"/> if the separator is found; otherwise, the first item in the tuple
         /// is the <paramref name="source"/> string itself and the second item is <see langword="null"/>.
         /// </returns>
         /// <exception cref="ArgumentNullException">
@@ -91,6 +91,52 @@ namespace Assorted.Utils.Text
 
             var i = source.IndexOf(separator);
             return (i != -1) ? (source.Substring(0, i), source.Substring(i + separator.Length)) : (source, default(string));
+        }
+
+        /// <summary>
+        /// Splits the string at the last occurrence of a specified Unicode character and returns the
+        /// substrings before and after the separator.
+        /// </summary>
+        /// <param name="source">The source string.</param>
+        /// <param name="separator">The separator Unicode character.</param>
+        /// <returns>
+        /// A <see cref="Tuple{T1, T2}"/> containing the substring before and after the last occurrences of the 
+        /// specified <paramref name="separator"/> if the separator is found; otherwise, the first item in the tuple
+        /// is <see langword="null"/> and the second item is the <paramref name="source"/> string itself.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static (string Head, string Tail) LastPartition(this string source, char separator)
+        {
+            Contract.Requires<ArgumentNullException>(source != null, nameof(source));
+
+            var i = source.LastIndexOf(separator);
+            return (i != -1) ? (source.Substring(0, i), source.Substring(i + 1)) : (default(string), source);
+        }
+
+        /// <summary>
+        /// Splits the string at the last occurrence of a specified string and returns the substrings before
+        /// and after the separator.
+        /// </summary>
+        /// <param name="source">The source string.</param>
+        /// <param name="separator">The separator string.</param>
+        /// <returns>
+        /// A <see cref="Tuple{T1, T2}"/> containing the substring before and after the last occurrences of the 
+        /// specified <paramref name="separator"/> if the separator is found; otherwise, the first item in the tuple
+        /// is <see langword="null"/> and the second item is the <paramref name="source"/> string itself.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="source"/> or <paramref name="separator"/> is <see langword="null"/>.
+        /// </exception>
+        public static (string Head, string Tail) LastPartition(this string source, string separator)
+        {
+            Contract.Requires<ArgumentNullException>(source != null, nameof(source));
+            Contract.Requires<ArgumentNullException>(separator != null, nameof(separator));
+
+            if (separator.Length == 0)
+                return (source, string.Empty);
+
+            var i = source.LastIndexOf(separator);
+            return (i != -1) ? (source.Substring(0, i), source.Substring(i + separator.Length)) : (default(string), source);
         }
 
         /// <summary>
