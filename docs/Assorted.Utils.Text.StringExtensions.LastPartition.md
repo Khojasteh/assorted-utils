@@ -1,21 +1,21 @@
-﻿# StringExtensions.Partition Method
+﻿# StringExtensions.LastPartition Method
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
 > Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Overload | Description
 --- | ---
-[Partition(this string, char)](Assorted.Utils.Text.StringExtensions.Partition.md#partitionthis-string-char) | Splits the string at the first occurrence of a specified Unicode character and returns the substrings before and after the separator.
-[Partition(this string, string)](Assorted.Utils.Text.StringExtensions.Partition.md#partitionthis-string-string) | Splits the string at the first occurrence of a specified string and returns the substrings before and after the separator.
+[LastPartition(this string, char)](Assorted.Utils.Text.StringExtensions.LastPartition.md#lastpartitionthis-string-char) | Splits the string at the last occurrence of a specified Unicode character and returns the substrings before and after the separator.
+[LastPartition(this string, string)](Assorted.Utils.Text.StringExtensions.LastPartition.md#lastpartitionthis-string-string) | Splits the string at the last occurrence of a specified string and returns the substrings before and after the separator.
 
-## Partition(this string, char)
+## LastPartition(this string, char)
 
-Splits the string at the first occurrence of a specified Unicode character and returns the substrings before and after the separator.
+Splits the string at the last occurrence of a specified Unicode character and returns the substrings before and after the separator.
 
 ### Syntax
 
 ```csharp
-public static ValueTuple<string, string> Partition(this string source, char separator)
+public static ValueTuple<string, string> LastPartition(this string source, char separator)
 ```
 
 #### Parameters
@@ -29,7 +29,7 @@ The separator Unicode character.
 #### Return Value
 
 [ValueTuple\<string, string>](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2,)\
-A [`System.Tuple<T1, T2>`](https://docs.microsoft.com/en-us/dotnet/api/system.tuple-2) containing the substring before and after the first occurrences of the specified `separator` if the separator is found; otherwise, the first item in the tuple is the `source` string itself and the second item is `null`.
+A [`System.Tuple<T1, T2>`](https://docs.microsoft.com/en-us/dotnet/api/system.tuple-2) containing the substring before and after the last occurrences of the specified `separator` if the separator is found; otherwise, the first item in the tuple is `null` and the second item is the `source` string itself.
 
 ### Exceptions
 
@@ -42,14 +42,14 @@ Exception | Description
 - [Assorted.Utils.Text Namespace](index.md#assortedutilstext-namespace)
 - [StringExtensions Class](Assorted.Utils.Text.StringExtensions.md)
 
-## Partition(this string, string)
+## LastPartition(this string, string)
 
-Splits the string at the first occurrence of a specified string and returns the substrings before and after the separator.
+Splits the string at the last occurrence of a specified string and returns the substrings before and after the separator.
 
 ### Syntax
 
 ```csharp
-public static ValueTuple<string, string> Partition(this string source, string separator)
+public static ValueTuple<string, string> LastPartition(this string source, string separator)
 ```
 
 #### Parameters
@@ -63,7 +63,7 @@ The separator string.
 #### Return Value
 
 [ValueTuple\<string, string>](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2,)\
-A [`System.Tuple<T1, T2>`](https://docs.microsoft.com/en-us/dotnet/api/system.tuple-2) containing the substring before and after the first occurrences of the specified `separator` if the separator is found; otherwise, the first item in the tuple is the `source` string itself and the second item is `null`.
+A [`System.Tuple<T1, T2>`](https://docs.microsoft.com/en-us/dotnet/api/system.tuple-2) containing the substring before and after the last occurrences of the specified `separator` if the separator is found; otherwise, the first item in the tuple is `null` and the second item is the `source` string itself.
 
 ### Exceptions
 

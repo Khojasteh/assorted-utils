@@ -1,7 +1,7 @@
 ﻿# HasherProxy.HasherProxy(Func\<HashAlgorithm>) Constructor
 
 > Namespace: [Assorted.Utils.Crypto](index.md#assortedutilscrypto-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Initializes a new instances of [`HasherProxy`](Assorted.Utils.Crypto.HasherProxy.md) class with the specified algorithm factory.
 

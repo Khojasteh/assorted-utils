@@ -1,7 +1,7 @@
 ﻿# ConvertUtils Class
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` ConvertUtils
 
 Provides some helper methods for converting primitive values from their culture independent string representation.

@@ -1,7 +1,7 @@
 ﻿# StringStream Constructor
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Initializes a new instance of [`StringStream`](Assorted.Utils.Text.StringStream.md) class.
 

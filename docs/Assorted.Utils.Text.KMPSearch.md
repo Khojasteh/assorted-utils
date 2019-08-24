@@ -1,7 +1,7 @@
 ﻿# KMPSearch Class
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` KMPSearch
 
 Implements Knuth–Morris–Pratt string-search algorithm.

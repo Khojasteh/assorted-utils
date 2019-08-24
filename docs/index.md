@@ -1,4 +1,4 @@
-﻿# Assorted.Utils Assembly (version 1.0.0.0)
+﻿# Assorted.Utils Assembly (version 1.0.1.0)
 
 The `Assorted.Utils` assembly exports types in the following namespaces.
 
@@ -105,6 +105,7 @@ The `Assorted.Utils.Text` namespace exposes the following types.
 Class | Description
 --- | ---
 [KMPSearch](Assorted.Utils.Text.KMPSearch.md) | Implements Knuth–Morris–Pratt string-search algorithm.
+[StringBuilderPool](Assorted.Utils.Text.StringBuilderPool.md) | Defines a pool of reusable [`System.Text.StringBuilder`](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder) objects.
 [StringExtensions](Assorted.Utils.Text.StringExtensions.md) | Extends the [`System.String`](https://docs.microsoft.com/en-us/dotnet/api/system.string) type.
 [StringStream](Assorted.Utils.Text.StringStream.md) | Creates a stream whose backing store is string.
 

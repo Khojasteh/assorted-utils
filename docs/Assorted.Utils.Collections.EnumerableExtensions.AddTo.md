@@ -1,7 +1,7 @@
 ﻿# EnumerableExtensions.AddTo\<TSource>(this IEnumerable\<TSource>, ICollection\<TSource>) Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Adds elements of the sequence to a specific collection.
 

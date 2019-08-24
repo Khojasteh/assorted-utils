@@ -1,7 +1,7 @@
 ﻿# StringExtensions.JaroWinklerSimilarityTo(this string, string, int) Method
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Returns the normalized Jaro-Winkler distance between two strings.
 

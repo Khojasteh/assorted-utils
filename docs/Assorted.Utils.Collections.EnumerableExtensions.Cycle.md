@@ -1,7 +1,7 @@
 ﻿# EnumerableExtensions.Cycle\<TSource>(this IEnumerable\<TSource>, int) Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Repeats the sequence by a specific number of times.
 

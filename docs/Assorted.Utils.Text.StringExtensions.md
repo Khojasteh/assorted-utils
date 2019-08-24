@@ -1,7 +1,7 @@
 ﻿# StringExtensions Class
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` StringExtensions
 
 Extends the [`System.String`](https://docs.microsoft.com/en-us/dotnet/api/system.string) type.
@@ -19,6 +19,8 @@ Method | Description
 [DamerauLevenshteinSimilarityTo(this string, string)](Assorted.Utils.Text.StringExtensions.DamerauLevenshteinSimilarityTo.md) | Returns the normalized Damerau-Levenshtein distance between two strings.
 [JaroSimilarityTo(this string, string)](Assorted.Utils.Text.StringExtensions.JaroSimilarityTo.md) | Returns the normalized Jaro distance between two strings.
 [JaroWinklerSimilarityTo(this string, string, int)](Assorted.Utils.Text.StringExtensions.JaroWinklerSimilarityTo.md) | Returns the normalized Jaro-Winkler distance between two strings.
+[LastPartition(this string, char)](Assorted.Utils.Text.StringExtensions.LastPartition.md#lastpartitionthis-string-char) | Splits the string at the last occurrence of a specified Unicode character and returns the substrings before and after the separator.
+[LastPartition(this string, string)](Assorted.Utils.Text.StringExtensions.LastPartition.md#lastpartitionthis-string-string) | Splits the string at the last occurrence of a specified string and returns the substrings before and after the separator.
 [LazySplit(this string, char, StringSplitOptions)](Assorted.Utils.Text.StringExtensions.LazySplit.md) | Returns the substrings in this string that are delimited by a specified Unicode character.
 [MatchingCharsWith(this string, string)](Assorted.Utils.Text.StringExtensions.MatchingCharsWith.md) | Returns the number of leading and trailing Unicode characters that appear in both strings.
 [Partition(this string, char)](Assorted.Utils.Text.StringExtensions.Partition.md#partitionthis-string-char) | Splits the string at the first occurrence of a specified Unicode character and returns the substrings before and after the separator.

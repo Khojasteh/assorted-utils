@@ -1,7 +1,7 @@
 ﻿# ObjectPool\<T> Constructor
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Initializes a new instance of [`ObjectPool<T>`](Assorted.Utils.Collections.ObjectPool-1.md) class.
 

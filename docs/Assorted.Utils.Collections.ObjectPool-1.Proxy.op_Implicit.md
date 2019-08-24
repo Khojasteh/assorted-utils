@@ -1,7 +1,7 @@
 ﻿# ObjectPool\<T>.Proxy.Implicit ObjectPool\<T>.Proxy to T Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Implicitly converts an [`ObjectPool<T>.Proxy`](Assorted.Utils.Collections.ObjectPool-1.Proxy.md) object to an object of type `T`.
 

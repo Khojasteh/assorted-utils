@@ -1,7 +1,7 @@
 ﻿# Recurrent Class
 
 > Namespace: [Assorted.Utils.Dates](index.md#assortedutilsdates-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` Recurrent
 
 This class provides some factory methods creating concrete instances of the [`IRecurrentPattern`](Assorted.Utils.Dates.IRecurrentPattern.md) interface.

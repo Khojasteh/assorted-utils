@@ -1,7 +1,7 @@
 ﻿# StringStream.ToString() Method
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Returns a string containing the characters written to the current stream so far.
 

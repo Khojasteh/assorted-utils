@@ -1,7 +1,7 @@
 ﻿# ObjectPool\<T>.Proxy.Dispose() Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Releases this instance and puts the [`Value`](Assorted.Utils.Collections.ObjectPool-1.Proxy.Value.md) back in the [`Pool`](Assorted.Utils.Collections.ObjectPool-1.Proxy.Pool.md).
 

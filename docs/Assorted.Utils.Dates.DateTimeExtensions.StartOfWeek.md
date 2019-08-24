@@ -1,7 +1,7 @@
 ﻿# DateTimeExtensions.StartOfWeek(this DateTime, DayOfWeek) Method
 
 > Namespace: [Assorted.Utils.Dates](index.md#assortedutilsdates-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Returns a [`System.DateTime`](https://docs.microsoft.com/en-us/dotnet/api/system.datetime) value that represents the first moment of the week.
 

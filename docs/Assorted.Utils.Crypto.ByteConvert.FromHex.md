@@ -1,7 +1,7 @@
 ﻿# ByteConvert.FromHex(string) Method
 
 > Namespace: [Assorted.Utils.Crypto](index.md#assortedutilscrypto-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Converts a hexadecimal string to its equivalent array of bytes.
 

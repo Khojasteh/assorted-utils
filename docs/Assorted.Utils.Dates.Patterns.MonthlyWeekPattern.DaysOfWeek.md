@@ -1,7 +1,7 @@
 ﻿# MonthlyWeekPattern.DaysOfWeek Property
 
 > Namespace: [Assorted.Utils.Dates.Patterns](index.md#assortedutilsdatespatterns-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Gets the accepted days of the week when the event can occur.
 

@@ -1,7 +1,7 @@
 ﻿# ObjectPool\<T>.Acquire() Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Returns an object from the pool. If the pool is empty, a new object is initialized.
 

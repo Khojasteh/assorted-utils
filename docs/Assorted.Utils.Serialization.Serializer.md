@@ -1,7 +1,7 @@
 ﻿# Serializer Class
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` Serializer
 
 This class provides access to the concrete and singleton instances of the [`ISerializer`](Assorted.Utils.Serialization.ISerializer.md) interface.

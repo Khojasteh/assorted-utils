@@ -1,7 +1,7 @@
 ﻿# ObjectPool\<T>.Proxy.Pool Property
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Gets the [`ObjectPool<T>`](Assorted.Utils.Collections.ObjectPool-1.md), which owns this instance.
 

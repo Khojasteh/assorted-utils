@@ -1,7 +1,7 @@
 ﻿# ObjectPool\<T>.ReleaseObject(T) Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Puts an object back in the pool if the pool's maximum capacity has not been reached; otherwise, disposes the object.
 

@@ -1,7 +1,7 @@
 ﻿# WeeklyPattern.WeeklyPattern(DaysOfTheWeek, int, DayOfWeek) Constructor
 
 > Namespace: [Assorted.Utils.Dates.Patterns](index.md#assortedutilsdatespatterns-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.0.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
 Initializes an instance of [`WeeklyPattern`](Assorted.Utils.Dates.Patterns.WeeklyPattern.md) class.
 

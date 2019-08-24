@@ -1,20 +1,20 @@
-﻿# StringStream.Encoding Property
+﻿# StringBuilderPool.Instance Property
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
 > Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
 
-Gets the text encoding in which the output is written.
+Gets the pool of [`System.Text.StringBuilder`](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder) objects.
 
 ## Syntax
 
 ```csharp
-public Encoding Encoding { get; }
+public static ObjectPool<StringBuilder> Instance { get; }
 ```
 
 ## See Also
 
 - [Assorted.Utils.Text Namespace](index.md#assortedutilstext-namespace)
-- [StringStream Class](Assorted.Utils.Text.StringStream.md)
+- [StringBuilderPool Class](Assorted.Utils.Text.StringBuilderPool.md)
 
 ---
 
