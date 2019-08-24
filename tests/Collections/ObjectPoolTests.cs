@@ -20,7 +20,7 @@ namespace Assorted.Utils.Collections.Tests
                 using (var proxy = pool.Acquire())
                 {
                     AppendSomething(proxy);
-                    Assert.That(proxy.ToString(), Is.EqualTo($"Something"));
+                    Assert.That(proxy.ToString(), Is.EqualTo("Something"));
                 }
                 Assert.That(pool.Count, Is.EqualTo(1));
             }
@@ -36,8 +36,8 @@ namespace Assorted.Utils.Collections.Tests
                 Assert.That(pool.Count, Is.Zero);
                 using (var proxy = pool.Acquire())
                 {
-                    proxy.Value.Append($"Test");
-                    Assert.That(proxy.ToString(), Is.EqualTo($"Test"));
+                    proxy.Value.Append("Test");
+                    Assert.That(proxy.ToString(), Is.EqualTo("Test"));
                 }
                 Assert.That(pool.Count, Is.EqualTo(1));
             }
