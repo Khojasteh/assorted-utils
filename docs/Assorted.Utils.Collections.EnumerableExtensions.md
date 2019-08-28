@@ -1,7 +1,7 @@
 ﻿# EnumerableExtensions Class
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` EnumerableExtensions
 
 Extends the enumerable objects.

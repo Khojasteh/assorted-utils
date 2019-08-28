@@ -1,7 +1,7 @@
 ﻿# StringBuilderPool.Instance Property
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Gets the pool of [`System.Text.StringBuilder`](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder) objects.
 

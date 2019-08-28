@@ -1,7 +1,7 @@
 ﻿# BinarySerializer.Deserialize Method
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Overload | Description
 --- | ---

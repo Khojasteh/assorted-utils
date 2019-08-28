@@ -1,7 +1,7 @@
 ﻿# KMPSearch.KMPSearch(string) Constructor
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Initializes a new instance of [`KMPSearch`](Assorted.Utils.Text.KMPSearch.md) class.
 

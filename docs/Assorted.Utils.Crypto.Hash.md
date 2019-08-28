@@ -1,7 +1,7 @@
 ﻿# Hash Class
 
 > Namespace: [Assorted.Utils.Crypto](index.md#assortedutilscrypto-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` Hash
 
 This class provides access to the concrete and singleton instances of the [`Hasher`](Assorted.Utils.Crypto.Hasher.md) class for the most common hashing algorithms.

@@ -1,7 +1,7 @@
 ﻿# DateUtils.DateForIso8601(int, int, DayOfWeek) Method
 
 > Namespace: [Assorted.Utils.Dates](index.md#assortedutilsdates-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Converts a specified `ISO-8601` year, week of the year and day of the week to its [`System.DateTime`](https://docs.microsoft.com/en-us/dotnet/api/system.datetime) equivalent value.
 

@@ -1,7 +1,7 @@
 ﻿# ObjectPool\<T>.Release(Proxy) Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Disposes a proxy object and puts its value back in the pool if the pool's maximum capacity has not been reached; otherwise, disposes the value too.
 

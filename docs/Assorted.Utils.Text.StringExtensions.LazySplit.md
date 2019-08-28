@@ -1,7 +1,7 @@
 ﻿# StringExtensions.LazySplit(this string, char, StringSplitOptions) Method
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Returns the substrings in this string that are delimited by a specified Unicode character.
 

@@ -1,7 +1,7 @@
 ﻿# ConvertExtensions Class
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` ConvertExtensions
 
 Extends primitive data types by adding the `ToStandardString()` method to them. The method returns the string representation of the extended objects in culture independent format.

@@ -1,7 +1,7 @@
 ﻿# Utf8StringWriter Class
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0\
 > Implements: [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable)\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` [MarshalByRefObject](https://docs.microsoft.com/en-us/dotnet/api/system.marshalbyrefobject) `→` [TextWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.textwriter) `→` [StringWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.stringwriter) `→` Utf8StringWriter
 

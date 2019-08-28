@@ -1,7 +1,7 @@
 ﻿# DateTimeExtensions.FormatIso8601(this DateTime) Method
 
 > Namespace: [Assorted.Utils.Dates](index.md#assortedutilsdates-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Returns the string representation of the date in `ISO-8601` format.
 

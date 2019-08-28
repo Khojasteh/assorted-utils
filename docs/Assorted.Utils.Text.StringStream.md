@@ -1,7 +1,7 @@
 ﻿# StringStream Class
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0\
 > Implements: [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable)\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` [MarshalByRefObject](https://docs.microsoft.com/en-us/dotnet/api/system.marshalbyrefobject) `→` [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream) `→` [MemoryStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.memorystream) `→` StringStream
 

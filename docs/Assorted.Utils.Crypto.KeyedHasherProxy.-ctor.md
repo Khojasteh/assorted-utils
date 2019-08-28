@@ -1,7 +1,7 @@
 ﻿# KeyedHasherProxy.KeyedHasherProxy(Func\<KeyedHashAlgorithm>) Constructor
 
 > Namespace: [Assorted.Utils.Crypto](index.md#assortedutilscrypto-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Initializes a new instances of [`KeyedHasherProxy`](Assorted.Utils.Crypto.KeyedHasherProxy.md) class with the specified algorithm factory.
 

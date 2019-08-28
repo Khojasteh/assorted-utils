@@ -1,4 +1,4 @@
-﻿# Assorted.Utils Assembly (version 1.0.1.0)
+﻿# Assorted.Utils Assembly (version 1.1.0.0)
 
 The `Assorted.Utils` assembly exports types in the following namespaces.
 
@@ -24,6 +24,8 @@ Class | Description
 --- | ---
 [ByteConvert](Assorted.Utils.Crypto.ByteConvert.md) | Converts an array of bytes to and from a string of hexadecimal digits.
 [BytesExtensions](Assorted.Utils.Crypto.BytesExtensions.md) | Extends the array of bytes objects.
+[CertExtenstions](Assorted.Utils.Crypto.CertExtenstions.md) | Extends objects of type [`System.Security.Cryptography.X509Certificates.X509Certificate2`](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2).
+[CertUtils](Assorted.Utils.Crypto.CertUtils.md) | Provides some helper methods for working with [`System.Security.Cryptography.X509Certificates.X509Certificate2`](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2) objects.
 [Hash](Assorted.Utils.Crypto.Hash.md) | This class provides access to the concrete and singleton instances of the [`Hasher`](Assorted.Utils.Crypto.Hasher.md) class for the most common hashing algorithms.
 [Hasher](Assorted.Utils.Crypto.Hasher.md) | Defines an abstract hash algorithm.
 [HasherProxy](Assorted.Utils.Crypto.HasherProxy.md) | Wraps a .NET hash algorithm.

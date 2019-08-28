@@ -1,7 +1,7 @@
 ﻿# StringExtensions.JaroSimilarityTo(this string, string) Method
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Returns the normalized Jaro distance between two strings.
 

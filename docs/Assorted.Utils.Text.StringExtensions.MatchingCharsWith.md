@@ -1,7 +1,7 @@
 ﻿# StringExtensions.MatchingCharsWith(this string, string) Method
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Returns the number of leading and trailing Unicode characters that appear in both strings.
 

@@ -1,7 +1,7 @@
 ﻿# DictionaryExtensions.GetValuesFor Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Returns values of the source dictionary with the specified keys.
 

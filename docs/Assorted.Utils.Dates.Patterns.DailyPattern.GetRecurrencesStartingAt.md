@@ -1,7 +1,7 @@
 ﻿# DailyPattern.GetRecurrencesStartingAt(DateTime) Method
 
 > Namespace: [Assorted.Utils.Dates.Patterns](index.md#assortedutilsdatespatterns-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Returns the sequence of recurring dates, starting at a given [`System.DateTime`](https://docs.microsoft.com/en-us/dotnet/api/system.datetime) value.
 

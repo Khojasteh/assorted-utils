@@ -1,7 +1,7 @@
 ﻿# ConvertUtils.StrToEnum\<TEnum>(string) Method
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Converts the specified standard string representation of an enumerated constant to its [`System.Enum`](https://docs.microsoft.com/en-us/dotnet/api/system.enum) equivalent. The leading and trailing white spaces are ignored.
 

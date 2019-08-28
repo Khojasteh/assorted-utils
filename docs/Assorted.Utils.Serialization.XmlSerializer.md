@@ -1,7 +1,7 @@
 ﻿# XmlSerializer Class
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0\
 > Implements: [ISerializer](Assorted.Utils.Serialization.ISerializer.md)\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` XmlSerializer
 

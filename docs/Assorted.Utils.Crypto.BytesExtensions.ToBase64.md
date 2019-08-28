@@ -1,7 +1,7 @@
 ﻿# BytesExtensions.ToBase64(this Byte[], Base64FormattingOptions) Method
 
 > Namespace: [Assorted.Utils.Crypto](index.md#assortedutilscrypto-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Converts the array of bytes to its equivalent string representation that is encoded with base-64 digits.
 

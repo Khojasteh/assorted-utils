@@ -1,7 +1,7 @@
 ﻿# WeeklyPattern Class
 
 > Namespace: [Assorted.Utils.Dates.Patterns](index.md#assortedutilsdatespatterns-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0\
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0\
 > Implements: [IRecurrentPattern](Assorted.Utils.Dates.IRecurrentPattern.md), [IEquatable\<WeeklyPattern>](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1)\
 > Inheritance: [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) `→` WeeklyPattern
 

@@ -1,7 +1,7 @@
 ﻿# ObjectPool\<T>.DisposeObject(T) Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Disposes the specified object if it implements the [`System.IDisposable`](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface.
 

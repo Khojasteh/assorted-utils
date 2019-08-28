@@ -1,7 +1,7 @@
 ﻿# EnumerableExtensions.DamerauLevenshteinDistance\<TSource>(this IEnumerable\<TSource>, IEnumerable\<TSource>) Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Returns the Damerau-Levenshtein distance of this sequence to a specified sequence.
 

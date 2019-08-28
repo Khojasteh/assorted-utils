@@ -1,7 +1,7 @@
 ﻿# EnumerableExtensions.ForEach\<TSource>(this IEnumerable\<TSource>, Action\<TSource>) Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Performs an action on each element of the sequence.
 

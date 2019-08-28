@@ -1,7 +1,7 @@
 ﻿# DateTimeExtensions.ReplaceTime(this DateTime, TimeSpan) Method
 
 > Namespace: [Assorted.Utils.Dates](index.md#assortedutilsdates-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Returns a [`System.DateTime`](https://docs.microsoft.com/en-us/dotnet/api/system.datetime) value with a new [`System.DateTime.TimeOfDay`](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.timeofday) while preserving the original [`System.DateTime.Date`](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.date) and [`System.DateTime.Kind`](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.kind) values.
 

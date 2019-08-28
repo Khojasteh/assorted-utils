@@ -1,7 +1,7 @@
 ﻿# KMPSearch.SearchIn Method
 
 > Namespace: [Assorted.Utils.Text](index.md#assortedutilstext-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Reports the zero-based indexes of all occurrences of the [`Target`](Assorted.Utils.Text.KMPSearch.Target.md) string in the given text.
 

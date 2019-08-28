@@ -1,7 +1,7 @@
 ﻿# YearlyWeekPattern.YearlyWeekPattern(WeekOfMonth, DaysOfTheWeek, int, int) Constructor
 
 > Namespace: [Assorted.Utils.Dates.Patterns](index.md#assortedutilsdatespatterns-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Initializes an instance of [`YearlyWeekPattern`](Assorted.Utils.Dates.Patterns.YearlyWeekPattern.md) class.
 

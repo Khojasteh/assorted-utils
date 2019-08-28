@@ -1,7 +1,7 @@
 ﻿# Utf8StringWriter Constructor
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Initializes a new instance of the [`Utf8StringWriter`](Assorted.Utils.Serialization.Utf8StringWriter.md) class.
 

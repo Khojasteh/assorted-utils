@@ -1,7 +1,7 @@
 ﻿# EnumerableExtensions.AsSet\<TSource>(this IEnumerable\<TSource>) Method
 
 > Namespace: [Assorted.Utils.Collections](index.md#assortedutilscollections-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Executes the deferred operations of the sequence if there is any, and returns the unique elements of the evaluated sequence as a set.
 

@@ -1,7 +1,7 @@
 ﻿# ConvertUtils.StrToUInt64(string) Method
 
 > Namespace: [Assorted.Utils.Serialization](index.md#assortedutilsserialization-namespace)\
-> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.0.1.0
+> Assembly: [Assorted.Utils](index.md) (Assorted.Utils.dll) version 1.1.0.0
 
 Converts the specified standard string representation of an integer number to its [`System.UInt64`](https://docs.microsoft.com/en-us/dotnet/api/system.uint64) equivalent. The leading and trailing white spaces are ignored.
 
