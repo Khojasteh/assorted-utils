@@ -12,10 +12,10 @@
     <RepositoryUrl>https://github.com/Khojasteh/assorted-utils</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>.NET Standard;Helpers;Utils</PackageTags>
-    <PackageIconUrl>http://kampute.com/favicon.ico</PackageIconUrl>
+    <PackageIconUrl>http://kampute.com/images/icon-light-bg.png</PackageIconUrl>
     <Description>A set of assorted helper functions, extensions and classes in .NET Standard</Description>
     <Authors>Kambiz Khojasteh</Authors>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="Debug" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,9 +25,9 @@
 
   <PropertyGroup Label="Release" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>
-      Introduced a couple of new string extensions and a pool of StringBuilder objects.
-    </PackageReleaseNotes>
+    <PackageReleaseNotes>Introduced some extension methods to X509Certificate2 class for encrypting and signing data.
+Added some methods for finding X509Certificate2 certificates in a certificate store.
+</PackageReleaseNotes>
     <!--
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Kambiz.Khojasteh.pfx</AssemblyOriginatorKeyFile>
