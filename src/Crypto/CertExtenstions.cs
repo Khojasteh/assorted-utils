@@ -179,7 +179,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="data"/>, <paramref name="signature"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
-        public static bool VeryfySignature(this X509Certificate2 cert, byte[] data, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
+        public static bool VerifySignature(this X509Certificate2 cert, byte[] data, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
             Contract.Requires<ArgumentNullException>(data != null, nameof(data));
@@ -199,9 +199,9 @@ namespace Assorted.Utils.Crypto
         /// <param name="signature">The signature data to be verified.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="data"/>, or <paramref name="signature"/> is <see langword="null"/>.</exception>
-        public static bool VeryfySignature(this X509Certificate2 cert, byte[] data, byte[] signature)
+        public static bool VerifySignature(this X509Certificate2 cert, byte[] data, byte[] signature)
         {
-            return cert.VeryfySignature(data, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
+            return cert.VerifySignature(data, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="stream"/>, <paramref name="signature"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
-        public static bool VeryfySignature(this X509Certificate2 cert, Stream stream, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
+        public static bool VerifySignature(this X509Certificate2 cert, Stream stream, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
             Contract.Requires<ArgumentNullException>(stream != null, nameof(stream));
@@ -235,9 +235,9 @@ namespace Assorted.Utils.Crypto
         /// <param name="signature">The signature data to be verified.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="stream"/>, or <paramref name="signature"/> is <see langword="null"/>.</exception>
-        public static bool VeryfySignature(this X509Certificate2 cert, Stream stream, byte[] signature)
+        public static bool VerifySignature(this X509Certificate2 cert, Stream stream, byte[] signature)
         {
-            return cert.VeryfySignature(stream, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
+            return cert.VerifySignature(stream, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="text"/>, <paramref name="signature"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
-        public static bool VeryfySignature(this X509Certificate2 cert, string text, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
+        public static bool VerifySignature(this X509Certificate2 cert, string text, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
             Contract.Requires<ArgumentNullException>(text != null, nameof(text));
@@ -271,9 +271,9 @@ namespace Assorted.Utils.Crypto
         /// <param name="signature">The signature data to be verified.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="text"/>, or <paramref name="signature"/> is <see langword="null"/>.</exception>
-        public static bool VeryfySignature(this X509Certificate2 cert, string text, byte[] signature)
+        public static bool VerifySignature(this X509Certificate2 cert, string text, byte[] signature)
         {
-            return cert.VeryfySignature(text, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
+            return cert.VerifySignature(text, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
         }
     }
 }

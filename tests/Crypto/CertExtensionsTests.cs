@@ -47,15 +47,15 @@ namespace Assorted.Utils.Crypto.Tests
         public void SigningArray(byte[] data)
         {
             var signature = signingCert.Sign(data);
-            Assert.That(signingCert.VeryfySignature(data, signature), Is.True);
+            Assert.That(signingCert.VerifySignature(data, signature), Is.True);
 
             var temperedSignature = signature.ToArray(); temperedSignature[0] = (byte)~signature[0];
-            Assert.That(signingCert.VeryfySignature(data, temperedSignature), Is.False);
+            Assert.That(signingCert.VerifySignature(data, temperedSignature), Is.False);
 
             if (data.Length != 0)
             {
                 var temperedData = data.ToArray(); temperedData[0] = (byte)~data[0];
-                Assert.That(signingCert.VeryfySignature(temperedData, signature), Is.False);
+                Assert.That(signingCert.VerifySignature(temperedData, signature), Is.False);
             }
         }
 
@@ -64,15 +64,15 @@ namespace Assorted.Utils.Crypto.Tests
         public void SigningString(string text)
         {
             var signature = signingCert.Sign(text);
-            Assert.That(signingCert.VeryfySignature(text, signature), Is.True);
+            Assert.That(signingCert.VerifySignature(text, signature), Is.True);
 
             var temperedSignature = signature.ToArray(); temperedSignature[0] = (byte)~signature[0];
-            Assert.That(signingCert.VeryfySignature(text, temperedSignature), Is.False);
+            Assert.That(signingCert.VerifySignature(text, temperedSignature), Is.False);
 
             if (text.Contains(' '))
             {
                 var temperedText = text.Replace(' ', '-');
-                Assert.That(signingCert.VeryfySignature(temperedText, signature), Is.False);
+                Assert.That(signingCert.VerifySignature(temperedText, signature), Is.False);
             }
         }
 
@@ -84,11 +84,11 @@ namespace Assorted.Utils.Crypto.Tests
             {
                 var signature = signingCert.Sign(stream);
                 stream.Seek(0, SeekOrigin.Begin);
-                Assert.That(signingCert.VeryfySignature(stream, signature), Is.True);
+                Assert.That(signingCert.VerifySignature(stream, signature), Is.True);
 
                 var temperedSignature = signature.ToArray(); temperedSignature[0] = (byte)~signature[0];
                 stream.Seek(0, SeekOrigin.Begin);
-                Assert.That(signingCert.VeryfySignature(stream, temperedSignature), Is.False);
+                Assert.That(signingCert.VerifySignature(stream, temperedSignature), Is.False);
             }
         }
     }
