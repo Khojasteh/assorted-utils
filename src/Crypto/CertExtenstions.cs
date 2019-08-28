@@ -19,60 +19,60 @@ namespace Assorted.Utils.Crypto
         /// Encrypts the specified byte array using the public key of the certificate and a specified padding mode.
         /// </summary>
         /// <param name="cert">A certificate object with public key.</param>
-        /// <param name="plainData">The data to be ciphered as an array of bytes.</param>
+        /// <param name="data">The data to be ciphered as an array of bytes.</param>
         /// <param name="padding">The padding mode of the encryption.</param>
         /// <returns>The ciphered data as an array of bytes.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="plainData"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
-        public static byte[] Encrypt(this X509Certificate2 cert, byte[] plainData, RSAEncryptionPadding padding)
+        /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="data"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        public static byte[] Encrypt(this X509Certificate2 cert, byte[] data, RSAEncryptionPadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
-            Contract.Requires<ArgumentNullException>(plainData != null, nameof(plainData));
+            Contract.Requires<ArgumentNullException>(data != null, nameof(data));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
             using (var rsa = cert.GetRSAPublicKey())
-                return rsa.Encrypt(plainData, padding);
+                return rsa.Encrypt(data, padding);
         }
 
         /// <summary>
-        /// Encrypts the specified byte array using the public key of the certificate and <see cref="RSAEncryptionPadding.OaepSHA256"/> padding mode.
+        /// Encrypts the specified byte array using the public key of the certificate and <see cref="RSAEncryptionPadding.OaepSHA1"/> padding mode.
         /// </summary>
         /// <param name="cert">A certificate object with public key.</param>
-        /// <param name="plainData">The data to be ciphered as an array of bytes.</param>
+        /// <param name="data">The data to be ciphered as an array of bytes.</param>
         /// <returns>The ciphered data as an array of bytes.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="plainData"/> is <see langword="null"/>.</exception>
-        public static byte[] Encrypt(this X509Certificate2 cert, byte[] plainData)
+        /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="data"/> is <see langword="null"/>.</exception>
+        public static byte[] Encrypt(this X509Certificate2 cert, byte[] data)
         {
-            return cert.Encrypt(plainData, RSAEncryptionPadding.OaepSHA256);
+            return cert.Encrypt(data, RSAEncryptionPadding.OaepSHA1);
         }
 
         /// <summary>
         /// Decrypts the ciphered data using the private key of the certificate and a specified padding mode.
         /// </summary>
         /// <param name="cert">A certificate object with private key.</param>
-        /// <param name="cipherData">The ciphered data as an array of bytes.</param>
+        /// <param name="cipher">The ciphered data as an array of bytes.</param>
         /// <param name="padding">The padding mode of the decryption.</param>
         /// <returns>The plain data as an array of bytes.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="cipherData"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
-        public static byte[] Decrypt(this X509Certificate2 cert, byte[] cipherData, RSAEncryptionPadding padding)
+        /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="cipher"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        public static byte[] Decrypt(this X509Certificate2 cert, byte[] cipher, RSAEncryptionPadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
-            Contract.Requires<ArgumentNullException>(cipherData != null, nameof(cipherData));
+            Contract.Requires<ArgumentNullException>(cipher != null, nameof(cipher));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
             using (var rsa = cert.GetRSAPrivateKey())
-                return rsa.Decrypt(cipherData, padding);
+                return rsa.Decrypt(cipher, padding);
         }
 
         /// <summary>
-        /// Decrypts the ciphered data using the private key of the certificate and <see cref="RSAEncryptionPadding.OaepSHA256"/> padding mode.
+        /// Decrypts the ciphered data using the private key of the certificate and <see cref="RSAEncryptionPadding.OaepSHA1"/> padding mode.
         /// </summary>
         /// <param name="cert">A certificate object with private key.</param>
-        /// <param name="cipherData">The ciphered data as an array of bytes.</param>
+        /// <param name="cipher">The ciphered data as an array of bytes.</param>
         /// <returns>The plain data as an array of bytes.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="cipherData"/> is <see langword="null"/>.</exception>
-        public static byte[] Decrypt(this X509Certificate2 cert, byte[] cipherData)
+        /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="cipher"/> is <see langword="null"/>.</exception>
+        public static byte[] Decrypt(this X509Certificate2 cert, byte[] cipher)
         {
-            return cert.Decrypt(cipherData, RSAEncryptionPadding.OaepSHA256);
+            return cert.Decrypt(cipher, RSAEncryptionPadding.OaepSHA1);
         }
 
         /// <summary>
