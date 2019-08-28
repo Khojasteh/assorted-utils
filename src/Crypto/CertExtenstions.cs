@@ -13,6 +13,7 @@ namespace Assorted.Utils.Crypto
     /// <summary>
     /// Extends objects of type <see cref="X509Certificate2"/>.
     /// </summary>
+    /// <threadsafety/>
     public static class CertExtenstions
     {
         /// <summary>
@@ -23,13 +24,18 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode of the encryption.</param>
         /// <returns>The ciphered data as an array of bytes.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="data"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA public key.</exception>
         public static byte[] Encrypt(this X509Certificate2 cert, byte[] data, RSAEncryptionPadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
             Contract.Requires<ArgumentNullException>(data != null, nameof(data));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
-            using (var rsa = cert.GetRSAPublicKey())
+            var rsa = cert.GetRSAPublicKey();
+            if (rsa == null)
+                throw new InvalidOperationException("The certificate does not have an RSA public key.");
+
+            using (rsa)
                 return rsa.Encrypt(data, padding);
         }
 
@@ -40,6 +46,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="data">The data to be ciphered as an array of bytes.</param>
         /// <returns>The ciphered data as an array of bytes.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="data"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA public key.</exception>
         public static byte[] Encrypt(this X509Certificate2 cert, byte[] data)
         {
             return cert.Encrypt(data, RSAEncryptionPadding.OaepSHA1);
@@ -53,13 +60,18 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode of the decryption.</param>
         /// <returns>The plain data as an array of bytes.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="cipher"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA private key.</exception>
         public static byte[] Decrypt(this X509Certificate2 cert, byte[] cipher, RSAEncryptionPadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
             Contract.Requires<ArgumentNullException>(cipher != null, nameof(cipher));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
-            using (var rsa = cert.GetRSAPrivateKey())
+            var rsa = cert.GetRSAPrivateKey();
+            if (rsa == null)
+                throw new InvalidOperationException("The certificate does not have an RSA private key.");
+
+            using (rsa)
                 return rsa.Decrypt(cipher, padding);
         }
 
@@ -70,6 +82,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="cipher">The ciphered data as an array of bytes.</param>
         /// <returns>The plain data as an array of bytes.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="cipher"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA private key.</exception>
         public static byte[] Decrypt(this X509Certificate2 cert, byte[] cipher)
         {
             return cert.Decrypt(cipher, RSAEncryptionPadding.OaepSHA1);
@@ -90,7 +103,11 @@ namespace Assorted.Utils.Crypto
             Contract.Requires<ArgumentNullException>(data != null, nameof(data));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
-            using (var rsa = cert.GetRSAPrivateKey())
+            var rsa = cert.GetRSAPrivateKey();
+            if (rsa == null)
+                throw new InvalidOperationException("The certificate does not have an RSA private key.");
+
+            using (rsa)
                 return rsa.SignData(data, hashAlgorithm, padding);
         }
 
@@ -101,6 +118,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="data">The input data for which to compute the hash.</param>
         /// <returns>The RSA signature for the specified data.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="data"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA private key.</exception>
         public static byte[] Sign(this X509Certificate2 cert, byte[] data)
         {
             return cert.Sign(data, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
@@ -115,13 +133,18 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode.</param>
         /// <returns>The RSA signature for the specified data.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="stream"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA private key.</exception>
         public static byte[] Sign(this X509Certificate2 cert, Stream stream, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
             Contract.Requires<ArgumentNullException>(stream != null, nameof(stream));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
-            using (var rsa = cert.GetRSAPrivateKey())
+            var rsa = cert.GetRSAPrivateKey();
+            if (rsa == null)
+                throw new InvalidOperationException("The certificate does not have an RSA private key.");
+
+            using (rsa)
                 return rsa.SignData(stream, hashAlgorithm, padding);
         }
 
@@ -132,6 +155,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="stream">The input stream for which to compute the hash.</param>
         /// <returns>The RSA signature for the specified data.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="stream"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA private key.</exception>
         public static byte[] Sign(this X509Certificate2 cert, Stream stream)
         {
             return cert.Sign(stream, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
@@ -146,13 +170,18 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode.</param>
         /// <returns>The RSA signature for the specified data.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="text"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA private key.</exception>
         public static byte[] Sign(this X509Certificate2 cert, string text, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
             Contract.Requires<ArgumentNullException>(text != null, nameof(text));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
-            using (var rsa = cert.GetRSAPrivateKey())
+            var rsa = cert.GetRSAPrivateKey();
+            if (rsa == null)
+                throw new InvalidOperationException("The certificate does not have an RSA private key.");
+
+            using (rsa)
                 return rsa.SignData(Encoding.UTF8.GetBytes(text), hashAlgorithm, padding);
         }
 
@@ -163,6 +192,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="text">The input string for which to compute the hash.</param>
         /// <returns>The RSA signature for the specified data.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/> or <paramref name="text"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA private key.</exception>
         public static byte[] Sign(this X509Certificate2 cert, string text)
         {
             return cert.Sign(text, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
@@ -179,6 +209,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="data"/>, <paramref name="signature"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA public key.</exception>
         public static bool VerifySignature(this X509Certificate2 cert, byte[] data, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
@@ -186,7 +217,11 @@ namespace Assorted.Utils.Crypto
             Contract.Requires<ArgumentNullException>(signature != null, nameof(signature));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
-            using (var rsa = cert.GetRSAPublicKey())
+            var rsa = cert.GetRSAPublicKey();
+            if (rsa == null)
+                throw new InvalidOperationException("The certificate does not have an RSA public key.");
+
+            using (rsa)
                 return rsa.VerifyData(data, signature, hashAlgorithm, padding);
         }
 
@@ -199,6 +234,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="signature">The signature data to be verified.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="data"/>, or <paramref name="signature"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA public key.</exception>
         public static bool VerifySignature(this X509Certificate2 cert, byte[] data, byte[] signature)
         {
             return cert.VerifySignature(data, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
@@ -215,6 +251,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="stream"/>, <paramref name="signature"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA public key.</exception>
         public static bool VerifySignature(this X509Certificate2 cert, Stream stream, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
@@ -222,7 +259,11 @@ namespace Assorted.Utils.Crypto
             Contract.Requires<ArgumentNullException>(signature != null, nameof(signature));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
-            using (var rsa = cert.GetRSAPublicKey())
+            var rsa = cert.GetRSAPublicKey();
+            if (rsa == null)
+                throw new InvalidOperationException("The certificate does not have an RSA public key.");
+
+            using (rsa)
                 return rsa.VerifyData(stream, signature, hashAlgorithm, padding);
         }
 
@@ -235,6 +276,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="signature">The signature data to be verified.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="stream"/>, or <paramref name="signature"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA public key.</exception>
         public static bool VerifySignature(this X509Certificate2 cert, Stream stream, byte[] signature)
         {
             return cert.VerifySignature(stream, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
@@ -251,6 +293,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="padding">The padding mode.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="text"/>, <paramref name="signature"/>, or <paramref name="padding"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA public key.</exception>
         public static bool VerifySignature(this X509Certificate2 cert, string text, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding)
         {
             Contract.Requires<ArgumentNullException>(cert != null, nameof(cert));
@@ -258,7 +301,11 @@ namespace Assorted.Utils.Crypto
             Contract.Requires<ArgumentNullException>(signature != null, nameof(signature));
             Contract.Requires<ArgumentNullException>(padding != null, nameof(padding));
 
-            using (var rsa = cert.GetRSAPublicKey())
+            var rsa = cert.GetRSAPublicKey();
+            if (rsa == null)
+                throw new InvalidOperationException("The certificate does not have an RSA public key.");
+
+            using (rsa)
                 return rsa.VerifyData(Encoding.UTF8.GetBytes(text), signature, hashAlgorithm, padding);
         }
 
@@ -271,6 +318,7 @@ namespace Assorted.Utils.Crypto
         /// <param name="signature">The signature data to be verified.</param>
         /// <returns><see langword="true"/> if the signature is valid; otherwise, <see langword="false"/>.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cert"/>, <paramref name="text"/>, or <paramref name="signature"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">The certificate does not have an RSA public key.</exception>
         public static bool VerifySignature(this X509Certificate2 cert, string text, byte[] signature)
         {
             return cert.VerifySignature(text, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pss);
